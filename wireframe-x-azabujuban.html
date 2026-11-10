@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>X AZABUJUBAN｜OTB DINING ワイヤーフレーム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--bg:#fff;--text:#1a1a1a;--text-sub:#666;--border:#e5e5e5;--placeholder-bg:#ededed;--placeholder-text:#777;--note-bg:#f6f6f6;--hd:72px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 14px/1.9 "Noto Sans JP",sans-serif;letter-spacing:.04em}
+h1,h2,h3,p,dl,dd,ul,figure{margin:0;padding:0}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.narrow{max-width:960px}
+.slim{max-width:720px}
+.sec{padding-block:120px}
+.sec-t{padding-top:0}
+.h1{font-size:36px;font-weight:700;line-height:1.5}
+.h2{font-size:26px;font-weight:700;line-height:1.5}
+.h3{font-size:18px;font-weight:500;line-height:1.6}
+.sub{color:var(--text-sub)}
+.small{font-size:12px}
+.center{text-align:center}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}.mt64{margin-top:64px}
+.prose p+p{margin-top:12px}
+
+/* 写真・図のプレースホルダ */
+.ph{background:var(--placeholder-bg);color:var(--placeholder-text);display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;line-height:1.6;text-align:center;padding:16px;aspect-ratio:var(--r,16/9)}
+.ph.fill{aspect-ratio:auto;height:100%}
+.ph.lb{align-items:flex-end}
+figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
+
+/* ヘッダー */
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);height:var(--hd);display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.logo{font-size:16px;font-weight:500;letter-spacing:.14em;display:inline-flex;align-items:center;min-height:44px}
+.gnav{display:flex;align-items:center;gap:28px;font-size:12px}
+.gnav a{display:inline-flex;align-items:center;min-height:44px}
+.gnav a[aria-current]{font-weight:700}
+.spnav{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 32px;background:var(--text);color:#fff;border:1px solid var(--text);border-radius:2px;font:inherit;font-size:13px;cursor:pointer}
+.btn-o{background:var(--bg);color:var(--text)}
+.gnav .btn{min-height:40px;padding:0 20px;color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.btns.c{justify-content:center}
+.more{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px;font-weight:500}
+
+/* 補足 */
+.note{background:var(--note-bg);color:var(--text-sub);font-size:12px;line-height:1.8;padding:10px 14px;border-radius:2px;margin-top:24px}
+
+/* フッター */
+.ft{padding:80px 40px 40px;max-width:1280px;margin:0 auto}
+.ft-in{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.ft-links{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:12px}
+.ft-links a{display:inline-flex;align-items:center;min-height:44px}
+.ft-bottom{margin-top:40px;font-size:11px;color:var(--text-sub)}
+.museum{max-width:480px;margin:0 auto;padding-top:40px}
+
+/* トップ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;height:calc(100svh - var(--hd));min-height:520px;padding:0 8px}
+.store{position:relative;display:block}
+.store-t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.store-t b{font-size:22px;font-weight:500;letter-spacing:.1em}
+
+/* 店舗共通 */
+.hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
+.hero-logo{position:absolute;background:#d9d9d9;color:#555;font-size:13px;display:flex;align-items:center;justify-content:center}
+.bar{display:none}
+.news-row{display:grid;grid-template-columns:110px 130px 1fr 16px;gap:16px;align-items:baseline;padding:18px 0;border-top:1px solid var(--border)}
+.news-row:last-child{border-bottom:1px solid var(--border)}
+.news-row .tag{font-size:12px;color:var(--text-sub)}
+.news-row time{font-size:12px;color:var(--text-sub)}
+.news-row i{font-size:11px;color:var(--text-sub)}
+.news-c .news-row{grid-template-columns:96px 1fr 16px}
+.info{display:grid;grid-template-columns:104px 1fr;gap:12px 16px}
+.info dt{color:var(--text-sub);font-size:13px}
+.info a{display:inline-block;padding:10px 0;margin:-10px 0}
+details.acc{border-top:1px solid var(--border)}
+details.acc:last-of-type{border-bottom:1px solid var(--border)}
+details.acc summary{display:flex;justify-content:space-between;align-items:center;min-height:52px;cursor:pointer;font-size:13px;font-weight:500;list-style:none}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"\f067";font:900 11px "Font Awesome 6 Free";color:var(--text-sub)}
+details.acc[open] summary::after{content:"\f068"}
+details.acc .in{padding:0 0 24px}
+
+/* X AZABUJUBAN */
+.x .hero-logo{left:50%;top:50%;width:200px;height:80px;transform:translate(-50%,-50%)}
+.x .h2{font-weight:500;letter-spacing:.14em;font-size:22px;text-align:center}
+.x .statement{padding-block:160px;text-align:center}
+.x-rows>*+*{margin-top:120px}
+.x-g2{display:grid;grid-template-columns:7fr 4fr;gap:80px;align-items:end}
+.x-solo{max-width:440px;margin-left:auto;margin-right:auto}
+.x-menu{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.x-sticky{position:sticky;top:96px}
+.course+.course{margin-top:56px}
+.course-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.course-list{margin-top:16px;display:grid;grid-template-columns:72px 1fr;gap:4px 16px;font-size:13px}
+.course-list dt{color:var(--text-sub)}
+.x-chef{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.x-staff{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.x-staff figure:last-child{margin-top:120px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+
+/* Cenador ROPPONGI */
+.c .hero-logo{left:40px;bottom:40px;width:360px;height:120px}
+.c .hero .ph{justify-content:flex-end}
+.c .h2{font-size:26px;letter-spacing:.08em}
+.c .sec{padding-block:80px}
+.c .sec-t{padding-top:0}
+.c-head{padding:80px 40px 32px;max-width:1200px;margin:0 auto}
+.mosaic{display:grid;grid-template-columns:7fr 5fr;gap:4px}
+.mosaic.rev{grid-template-columns:5fr 7fr}
+.m-b{display:grid;grid-template-rows:1fr 1fr;gap:4px}
+.m-b .dish,.m-b .ph{height:100%}
+.m-b .ph{aspect-ratio:auto}
+.dish{position:relative}
+.dish-n{position:absolute;left:20px;bottom:14px;font-size:14px;font-weight:500}
+.stack4>*+*{margin-top:4px}
+.c-menu{display:grid;grid-template-columns:1fr 1fr;gap:64px 80px}
+.m-row{display:flex;justify-content:space-between;gap:24px;padding:7px 0}
+.m-row small{display:block;font-size:12px;color:var(--text-sub)}
+.m-row span:last-child{white-space:nowrap}
+.c-three{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.c-three .t{padding:12px 20px 0}
+.c-person{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
+.c-person.rev{grid-template-columns:5fr 7fr}
+.c-info{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+
+/* 共通ページ */
+.page-h{padding:96px 0 64px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 24px;font-size:13px}
+.tabs a{display:inline-flex;align-items:center;min-height:44px;color:var(--text-sub)}
+.tabs a[aria-current]{color:var(--text);font-weight:700}
+.pager{display:flex;justify-content:center;gap:8px;margin-top:64px;font-size:13px}
+.pager a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--text-sub)}
+.pager a[aria-current]{color:var(--text);font-weight:700}
+.form{max-width:640px;margin-inline:auto}
+.field{margin:0 0 28px;border:0;padding:0;min-width:0}
+input[type=radio],input[type=checkbox]{margin:0}
+.field>label,.field legend{display:block;font-size:13px;font-weight:500;margin-bottom:8px;padding:0}
+.req{font-size:11px;color:var(--text-sub);font-weight:400;margin-left:8px}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;min-height:48px;padding:10px 12px;border:1px solid #bbb;border-radius:2px;background:var(--bg);font:inherit;font-size:16px;color:var(--text)}
+textarea{min-height:180px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:0 28px}
+.opts label{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px}
+.notice{background:var(--note-bg);padding:24px;border-radius:2px}
+.job-row{display:grid;grid-template-columns:150px 1fr;gap:12px 24px;margin-bottom:24px}
+.job-row dt{color:var(--text-sub);font-size:13px}
+.idx{display:grid;grid-template-columns:48px 1fr 200px 110px;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--border)}
+.idx:last-child{border-bottom:1px solid var(--border)}
+
+@media (max-width:900px){
+  :root{--hd:56px}
+  html{scroll-padding-top:68px}
+  .wrap{padding:0 20px}
+  .sec{padding-block:80px}
+  .h1{font-size:28px}
+  .h2{font-size:22px}
+  .ph{aspect-ratio:var(--rs,var(--r,16/9))}
+  .hd{padding:0 8px 0 20px}
+  .gnav{display:none}
+  .spnav{display:block}
+  .spnav summary{display:flex;align-items:center;justify-content:center;width:48px;height:48px;cursor:pointer;font-size:18px;list-style:none}
+  .spnav summary::-webkit-details-marker{display:none}
+  .spnav[open] summary i::before{content:"\f00d"}
+  .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
+  .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
+  .ft{padding:64px 20px 32px}
+  .split{grid-template-columns:1fr;height:calc(100svh - var(--hd));min-height:480px;gap:4px;padding:0}
+  .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:15;height:56px;align-items:center;justify-content:center;background:var(--text);color:#fff;font-size:13px;letter-spacing:.14em;font-weight:500}
+  .has-bar{padding-bottom:56px}
+  .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
+  .x .statement{padding-block:96px}
+  .x-rows>*+*{margin-top:72px}
+  .x-g2{grid-template-columns:1fr;gap:48px}
+  .x-g2 figure:last-child{margin-left:72px}
+  .x-solo{max-width:none;margin-left:40px;margin-right:40px}
+  .x-menu,.x-chef,.two,.c-menu,.c-info{grid-template-columns:1fr;gap:48px}
+  .x-sticky{position:static}
+  .x-staff{grid-template-columns:1fr;gap:40px}
+  .x-staff figure:first-child{margin-right:56px}
+  .x-staff figure:last-child{margin-top:0;margin-left:56px}
+  .c .sec{padding-block:64px}
+  .c .sec-t{padding-top:0}
+  .c .hero-logo{left:20px;bottom:20px;width:220px;height:80px}
+  .c-head{padding:64px 20px 24px}
+  .mosaic,.mosaic.rev{grid-template-columns:1fr}
+  .m-b{grid-template-rows:none}
+  .m-b .dish,.m-b .ph{height:auto}
+  .m-b .ph{aspect-ratio:var(--rs,1/1)}
+  .c-three{grid-template-columns:1fr}
+  .c-three .t{padding:12px 20px 16px}
+  .c-person,.c-person.rev{grid-template-columns:1fr;gap:24px}
+  .c-person.rev .c-txt{order:2}
+  .page-h{padding:56px 0 40px}
+  .news-row,.news-c .news-row{grid-template-columns:auto 1fr 16px;gap:2px 12px}
+  .news-row time{grid-column:1}
+  .news-row .tag{grid-column:2}
+  .news-row .ttl{grid-column:1/3;grid-row:2}
+  .news-row i{grid-column:3;grid-row:1/3;align-self:center}
+  .news-c .news-row .ttl{grid-column:1/3}
+  .job-row{grid-template-columns:1fr;gap:2px}
+  .job-row dd{margin-bottom:12px}
+  .job-row{margin-bottom:12px}
+  .idx{grid-template-columns:32px 1fr;gap:2px 8px}
+  .idx span:nth-child(n+3){grid-column:2;font-size:12px;color:var(--text-sub)}
+}
+</style>
+</head>
+<body class="x has-bar">
+<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="店舗内メニュー"><a href="#gallery">GALLERY</a><a href="#menu">MENU</a><a href="#chef">CHEF</a><a href="#news">NEWS</a><a href="#access">ACCESS</a><a class="btn" href="#reservation">RESERVATION</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><a href="#gallery">GALLERY</a><a href="#menu">MENU</a><a href="#chef">CHEF</a><a href="#news">NEWS</a><a href="#access">ACCESS</a><a href="wireframe-top.html">OTB DINING TOP</a></nav></details></header>
+<main>
+  <div class="hero">
+    <div class="ph fill lb" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
+    <div class="hero-logo">店舗ロゴ</div>
+  </div>
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">X AZABUJUBAN</h1>
+
+  <div class="wrap slim statement">
+    <p class="h3">日常の味を愉しむ、非日常の空間。</p>
+    <p class="mt24 sub">ジャンルを超えて進化を続ける料理と、希少性の高い銘酒を、現代日本画とともに。</p>
+    <p class="note">現行サイトの言葉を、仮で入れています。見出しは20字程度、本文は40字程度です。店舗の説明は、ここだけにします。</p>
+  </div>
+
+  <section id="gallery" class="sec sec-t">
+    <div class="wrap narrow">
+      <h2 class="h2">GALLERY</h2>
+      <div class="x-rows mt64">
+        <figure><div class="ph " style="--r:3/2;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンターの特等席から眺める日本画</span></div><figcaption>作品名／作家名</figcaption></figure>
+        <div class="x-g2">
+          <figure><div class="ph " style="--r:4/5;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：現代日本画の全景</span></div><figcaption>作品名／作家名</figcaption></figure>
+          <figure><div class="ph " style="--r:1/1;--rs:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品のディテール</span></div></figure>
+        </div>
+        <figure class="x-solo"><div class="ph " style="--r:3/4;--rs:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品を1点だけ、美術館のように見せる</span></div><figcaption>作品名／作家名</figcaption></figure>
+      </div>
+      <p class="note">このページで、もっとも大きく扱う場所です。作品は定期的に入れ替わるため、写真と作品名を差し替えられる形にします。</p>
+    </div>
+    <div class="mt64"><div class="ph " style="--r:21/9;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室と照明の質感</span></div></div>
+  </section>
+
+  <section id="menu" class="sec sec-t">
+    <div class="wrap narrow">
+      <h2 class="h2">MENU</h2>
+      <div class="x-menu mt64">
+        <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：鮨を握る手元</span></div></div>
+        <div>
+          <div class="course">
+            <div class="course-h"><h3 class="h3">季節のおまかせコース</h3><span>13,200円／人</span></div>
+            <p class="small sub mt8">全8品。2026年11月の一例です。</p>
+            <dl class="course-list">
+              <dt>先付け</dt><dd>小鉢四種</dd>
+              <dt>冷菜</dt><dd>季節の握り鮨　二貫</dd>
+              <dt>蒸物</dt><dd>百合根入り茶碗蒸し</dd>
+              <dt>揚物</dt><dd>舞茸と雲子の天麩羅</dd>
+              <dt>魚料理</dt><dd>鰤しゃぶ</dd>
+              <dt>肉料理</dt><dd>豚の角煮</dd>
+              <dt>御食事</dt><dd>冷たいとろろ蕎麦</dd>
+              <dt>甘味</dt><dd>卵黄のあいす</dd>
+            </dl>
+          </div>
+          <div class="course">
+            <div class="course-h"><h3 class="h3">晩酌セット</h3><span>6,600円／人</span></div>
+            <p class="mt8">旬の小鉢と本日の一品に、アラカルトを、お好みで追加いただけます。</p>
+          </div>
+          <div class="course">
+            <div class="course-h"><h3 class="h3">ドリンク</h3></div>
+            <p class="mt8">日本酒、ワイン、シャンパーニュなどを、ご用意しています。</p>
+            <a class="more mt8" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>ドリンクメニューを見る</a>
+          </div>
+          <ul class="small sub mt40">
+            <li>表示価格は、税込です。別途、サービス料10％を頂戴いたします。</li>
+            <li>完全予約制です。</li>
+            <li>季節や仕入れにより、お料理の内容が変わる場合がございます。</li>
+            <li>アレルギーや食事制限は、ご予約時にご相談ください。</li>
+          </ul>
+          <p class="note">コースは、1コース1項目で更新する想定です。コースが増えても、この並びのまま下に続きます。品数の多いドリンクのみ、PDFにする案です。</p>
+        </div>
+      </div>
+      <div class="x-rows" style="margin-top:96px">
+        <div class="ph " style="--r:16/9;--rs:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：季節を問わず使える一皿</span></div>
+        <div class="two">
+          <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：器</span></div>
+          <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：お酒とワイン</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chef" class="sec sec-t">
+    <div class="wrap narrow">
+      <h2 class="h2">CHEF</h2>
+      <div class="x-chef mt64">
+        <div class="ph " style="--r:3/4;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理長のポートレート</span></div>
+        <div>
+          <p class="small sub">料理長</p>
+          <p class="h3">日高 慎伸</p>
+          <p class="mt16">都内屈指の老舗料亭にて約10年間の研鑽を積んだ後、麻布の鮨店で大将を務める。会席や鮨のみならず、鰻、天麩羅、すき焼き、鉄板焼き、蕎麦など、幅広い分野で経験を重ね、技術を磨き上げてきた。</p>
+          <div class="mt40"><div class="ph " style="--r:3/2"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の風景</span></div></div>
+          <p class="note">ご支給のプロフィールから、仮で抜粋しています。本文は100字程度です。お名前の漢字（高と髙）を、ご確認ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-t" aria-label="STAFF">
+    <div class="wrap narrow">
+      <h2 class="h2">STAFF</h2>
+      <div class="x-staff mt64">
+        <figure><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：蕎麦打ちの手元</span></div></figure>
+        <figure><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：和服の女将による接客</span></div></figure>
+      </div>
+      <p class="note">お名前やプロフィールは置かず、仕事の様子を写真だけで見せます。</p>
+    </div>
+  </section>
+
+  <section id="news" class="sec sec-t">
+    <div class="wrap narrow">
+      <div class="two">
+        <div class="news-c">
+          <h2 class="h2" style="text-align:left">NEWS</h2>
+          <div class="mt24"><a class="news-row" href="wireframe-news-detail.html"><time>2026.08.25</time><span class="ttl">開店5周年と新体制移行のご案内</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.05.21</time><span class="ttl">価格改定のお知らせ</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.04.09</time><span class="ttl">4月の休業のお知らせ</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+          <a class="more mt16" href="wireframe-news.html">お知らせ一覧へ<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        </div>
+        <div>
+          <h2 class="h2" style="text-align:left">INSTAGRAM</h2>
+          <p class="mt24">最新の様子は、Instagramで、お届けしています。</p>
+          <a class="more mt8" href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>@x.azabujuban</a>
+          <p class="note">静かな印象を保つため、投稿の一覧は置かず、リンクのみにしました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access" class="sec sec-t">
+    <div class="wrap narrow">
+      <h2 class="h2">INFORMATION / ACCESS</h2>
+      <div class="two mt64">
+        <div>
+          <dl class="info">
+            <dt>住所</dt><dd>〒106-0046<br>東京都港区元麻布3-12-4 SP元麻布101</dd>
+            <dt>アクセス</dt><dd>東京メトロ南北線、都営大江戸線。麻布十番駅から、徒歩6分です。</dd>
+            <dt>電話</dt><dd><a href="tel:0364592888">03-6459-2888</a></dd>
+            <dt>営業時間</dt><dd>月〜金　17:00〜22:30（L.O. 21:00）</dd>
+            <dt>定休日</dt><dd>土曜日、日曜日、祝日</dd>
+            <dt>席数</dt><dd>カウンター8席、個室1室（最大6名）</dd>
+          </dl>
+          <div class="mt40"><details class="acc"><summary>個室のご利用について</summary><div class="in sub">個室の料金と、ご利用の条件が入ります。100字程度です。</div></details><details class="acc"><summary>キャンセルについて</summary><div class="in sub">キャンセルの規定が入ります。100字程度です。</div></details><details class="acc"><summary>お子さま、ペットのご同伴について</summary><div class="in sub">ご利用の条件が入ります。100字程度です。</div></details></div>
+        </div>
+        <div>
+          <div class="ph " style="--r:4/3;--rs:4/3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>地図</span></div>
+          <a class="more mt8" href="#">Googleマップで開く<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div><div class="ph " style="--r:21/9;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：夜の入口、または客席</span></div></div>
+  <section id="reservation" class="sec">
+    <div class="wrap narrow center">
+      <h2 class="h2">RESERVATION</h2>
+      <p class="mt16">完全予約制です。ご予約は、下記より承ります。</p>
+      <div class="btns c mt40">
+        <a class="btn" href="#">一休.comレストランで予約<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        <a class="btn" href="#">食べログで予約<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        <a class="btn btn-o" href="tel:0364592888"><i class="fa-solid fa-phone" aria-hidden="true"></i>03-6459-2888</a>
+      </div>
+    </div>
+  </section>
+</main>
+<a class="bar" href="#reservation">RESERVATION</a>
+<footer class="ft"><div class="museum"><div class="ph " style="--r:5/1;--rs:4/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>美術館のバナー（ロゴまたは写真）</span></div></div><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<script>
+document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});
+</script>
+</body>
+</html>
