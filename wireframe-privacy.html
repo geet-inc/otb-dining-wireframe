@@ -63,11 +63,39 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .ft-bottom{margin-top:40px;font-size:11px;color:var(--text-sub)}
 .museum{max-width:480px;margin:0 auto;padding-top:40px}
 
+/* ナビの店舗一覧 */
+.dd{position:relative}
+.dd>a i{font-size:10px;margin-left:6px}
+.dd-p{display:none;position:absolute;top:100%;left:-24px;min-width:260px;background:var(--bg);border:1px solid var(--border);padding:8px 24px}
+.dd:hover .dd-p,.dd:focus-within .dd-p{display:block}
+.dd-p a{display:flex;justify-content:space-between;gap:16px;min-height:44px}
+.dd-p a span{color:var(--text-sub)}
+.sp-h{display:block;margin-top:8px;font-size:12px;color:var(--text-sub)}
+.spnav nav .sp-s{padding-left:16px}
+
 /* トップ */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;height:calc(100svh - var(--hd));min-height:520px;padding:0 8px}
-.store{position:relative;display:block}
-.store-t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
-.store-t b{font-size:22px;font-weight:500;letter-spacing:.1em}
+.fv{position:relative;height:calc(100svh - var(--hd));min-height:560px}
+.fv>.ph{position:absolute;inset:0;height:100%;aspect-ratio:auto;align-items:flex-end;justify-content:flex-end;padding:24px 40px}
+.fv-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 80px}
+.fv-logo{font-size:15px;font-weight:500;letter-spacing:.2em}
+.fv-list{margin-top:40px}
+.fv-list a{display:flex;align-items:baseline;gap:20px;min-height:64px;font-size:30px;font-weight:500;letter-spacing:.08em}
+.fv-list a span{font-size:12px;font-weight:400;color:var(--text-sub);letter-spacing:.04em}
+.fv-list a[aria-current]{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:1px}
+.fv-dots{position:absolute;left:80px;bottom:32px;display:flex;gap:8px}
+.fv-dots span{width:24px;height:2px;background:#bbb}
+.fv-dots span:first-child{background:var(--text)}
+.intro{padding-block:120px 0}
+.rs{display:grid;gap:64px}
+.rs-row{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
+.rs-row>.ph{height:60svh;min-height:400px;aspect-ratio:auto}
+.rs-name{font-size:24px;font-weight:500;letter-spacing:.08em}
+.rs-add{border:1px dashed #bbb;padding:32px;text-align:center;color:var(--text-sub);font-size:12px}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:40px}
+.ft-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:40px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.ft-stores dt{font-size:14px;font-weight:500;letter-spacing:.08em}
+.ft-stores dd{font-size:12px;color:var(--text-sub);line-height:1.9}
+.ft-stores dd a{display:inline-flex;align-items:center;gap:8px;min-height:44px}
 
 /* 店舗共通 */
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
@@ -173,7 +201,18 @@ textarea{min-height:180px;resize:vertical}
   .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
   .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
   .ft{padding:64px 20px 32px}
-  .split{grid-template-columns:1fr;height:calc(100svh - var(--hd));min-height:480px;gap:4px;padding:0}
+  .fv{height:auto;min-height:0}
+  .fv>.ph{position:relative;inset:auto;height:auto;aspect-ratio:4/5;padding:16px 20px 40px;justify-content:center}
+  .fv-in{position:static;padding:32px 20px 0}
+  .fv-list{margin-top:16px}
+  .fv-list a{font-size:22px;min-height:56px;border-top:1px solid var(--border);justify-content:space-between}
+  .fv-list a:last-child{border-bottom:1px solid var(--border)}
+  .fv-dots{left:20px;bottom:auto;top:calc(125vw - 24px)}
+  .intro{padding-block:80px 0}
+  .rs{gap:56px}
+  .rs-row{grid-template-columns:1fr;gap:24px}
+  .rs-row>.ph{height:auto;min-height:0;aspect-ratio:4/3}
+  .sec-h{margin-bottom:24px}
   .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:15;height:56px;align-items:center;justify-content:center;background:var(--text);color:#fff;font-size:13px;letter-spacing:.14em;font-weight:500}
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
@@ -215,7 +254,7 @@ textarea{min-height:180px;resize:vertical}
 </style>
 </head>
 <body class="">
-<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="wireframe-top.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
 <main class="wrap slim">
   <div class="page-h"><h1 class="h1">PRIVACY POLICY</h1></div>
   <p class="sub">前文が入ります。</p>
@@ -224,7 +263,7 @@ textarea{min-height:180px;resize:vertical}
   <p class="note">文面は、ご支給いただく想定です。項目は、仮で置いています。</p>
   <div class="mt64"></div>
 </main>
-<footer class="ft"><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});

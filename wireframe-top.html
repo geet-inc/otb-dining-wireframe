@@ -63,11 +63,39 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .ft-bottom{margin-top:40px;font-size:11px;color:var(--text-sub)}
 .museum{max-width:480px;margin:0 auto;padding-top:40px}
 
+/* ナビの店舗一覧 */
+.dd{position:relative}
+.dd>a i{font-size:10px;margin-left:6px}
+.dd-p{display:none;position:absolute;top:100%;left:-24px;min-width:260px;background:var(--bg);border:1px solid var(--border);padding:8px 24px}
+.dd:hover .dd-p,.dd:focus-within .dd-p{display:block}
+.dd-p a{display:flex;justify-content:space-between;gap:16px;min-height:44px}
+.dd-p a span{color:var(--text-sub)}
+.sp-h{display:block;margin-top:8px;font-size:12px;color:var(--text-sub)}
+.spnav nav .sp-s{padding-left:16px}
+
 /* トップ */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;height:calc(100svh - var(--hd));min-height:520px;padding:0 8px}
-.store{position:relative;display:block}
-.store-t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
-.store-t b{font-size:22px;font-weight:500;letter-spacing:.1em}
+.fv{position:relative;height:calc(100svh - var(--hd));min-height:560px}
+.fv>.ph{position:absolute;inset:0;height:100%;aspect-ratio:auto;align-items:flex-end;justify-content:flex-end;padding:24px 40px}
+.fv-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 80px}
+.fv-logo{font-size:15px;font-weight:500;letter-spacing:.2em}
+.fv-list{margin-top:40px}
+.fv-list a{display:flex;align-items:baseline;gap:20px;min-height:64px;font-size:30px;font-weight:500;letter-spacing:.08em}
+.fv-list a span{font-size:12px;font-weight:400;color:var(--text-sub);letter-spacing:.04em}
+.fv-list a[aria-current]{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:1px}
+.fv-dots{position:absolute;left:80px;bottom:32px;display:flex;gap:8px}
+.fv-dots span{width:24px;height:2px;background:#bbb}
+.fv-dots span:first-child{background:var(--text)}
+.intro{padding-block:120px 0}
+.rs{display:grid;gap:64px}
+.rs-row{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
+.rs-row>.ph{height:60svh;min-height:400px;aspect-ratio:auto}
+.rs-name{font-size:24px;font-weight:500;letter-spacing:.08em}
+.rs-add{border:1px dashed #bbb;padding:32px;text-align:center;color:var(--text-sub);font-size:12px}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:40px}
+.ft-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:40px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.ft-stores dt{font-size:14px;font-weight:500;letter-spacing:.08em}
+.ft-stores dd{font-size:12px;color:var(--text-sub);line-height:1.9}
+.ft-stores dd a{display:inline-flex;align-items:center;gap:8px;min-height:44px}
 
 /* 店舗共通 */
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
@@ -173,7 +201,18 @@ textarea{min-height:180px;resize:vertical}
   .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
   .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
   .ft{padding:64px 20px 32px}
-  .split{grid-template-columns:1fr;height:calc(100svh - var(--hd));min-height:480px;gap:4px;padding:0}
+  .fv{height:auto;min-height:0}
+  .fv>.ph{position:relative;inset:auto;height:auto;aspect-ratio:4/5;padding:16px 20px 40px;justify-content:center}
+  .fv-in{position:static;padding:32px 20px 0}
+  .fv-list{margin-top:16px}
+  .fv-list a{font-size:22px;min-height:56px;border-top:1px solid var(--border);justify-content:space-between}
+  .fv-list a:last-child{border-bottom:1px solid var(--border)}
+  .fv-dots{left:20px;bottom:auto;top:calc(125vw - 24px)}
+  .intro{padding-block:80px 0}
+  .rs{gap:56px}
+  .rs-row{grid-template-columns:1fr;gap:24px}
+  .rs-row>.ph{height:auto;min-height:0;aspect-ratio:4/3}
+  .sec-h{margin-bottom:24px}
   .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:15;height:56px;align-items:center;justify-content:center;background:var(--text);color:#fff;font-size:13px;letter-spacing:.14em;font-weight:500}
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
@@ -215,22 +254,70 @@ textarea{min-height:180px;resize:vertical}
 </style>
 </head>
 <body class="">
-<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="wireframe-top.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
 <main>
-  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">OTB DINING</h1>
-  <div class="split">
-    <a class="store" href="wireframe-x-azabujuban.html">
-      <div class="ph fill lb" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
-      <span class="store-t"><b>X AZABUJUBAN</b><span class="small sub">麻布十番</span></span>
-    </a>
-    <a class="store" href="wireframe-cenador-roppongi.html">
-      <div class="ph fill lb" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div>
-      <span class="store-t"><b>Cenador ROPPONGI</b><span class="small sub">六本木</span></span>
-    </a>
-  </div>
-  <div class="wrap"><p class="note">トップは、1画面で2店舗だけを見せます。説明の文章は、あえて置いていません。3店舗目が増えたときは、同じ形で横に並べ、スマートフォンでは縦に続けます。</p></div>
+  <section class="fv">
+    <div class="ph " style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店舗ごとの写真が、ゆっくり切り替わります</span></div>
+    <div class="fv-in">
+      <h1 class="fv-logo">OTB DINING</h1>
+      <nav class="fv-list" aria-label="店舗"><a href="wireframe-x-azabujuban.html" aria-current="true">X AZABUJUBAN<span>麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span>六本木</span></a></nav>
+    </div>
+    <div class="fv-dots" aria-hidden="true"><span></span><span></span></div>
+  </section>
+  <div class="wrap"><p class="note">写真は、各店舗の写真を順番に切り替えます。PCでは、店名にカーソルを乗せると、その店舗の写真に変わります。店名の一覧は店舗のCMSから読み込むため、店舗が増えても、この形のまま並びます。</p></div>
+
+  <section class="wrap intro center">
+    <p class="h3">東京で、レストランを営んでいます。</p>
+    <p class="note">この1行は任意です。事実だけを書き、店舗の数は入れません。入れるかどうかは、打ち合わせで決めます。</p>
+  </section>
+
+  <section class="sec" id="restaurants">
+    <div class="wrap">
+      <div class="sec-h"><h2 class="h2">RESTAURANTS</h2></div>
+      <div class="rs">
+        <article class="rs-row">
+      <div class="ph " style="--r:16/9;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
+      <div>
+        <h3 class="rs-name">X AZABUJUBAN</h3>
+        <p class="small sub mt8">麻布十番</p>
+        <p class="mt24">店舗のひとことが入ります（20字程度）</p>
+        <div class="btns mt40"><a class="btn" href="wireframe-x-azabujuban.html">店舗を見る</a><a class="btn btn-o" href="wireframe-x-azabujuban.html#reservation">予約する</a></div>
+      </div>
+    </article><article class="rs-row">
+      <div class="ph " style="--r:16/9;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div>
+      <div>
+        <h3 class="rs-name">Cenador ROPPONGI</h3>
+        <p class="small sub mt8">六本木</p>
+        <p class="mt24">店舗のひとことが入ります（20字程度）</p>
+        <div class="btns mt40"><a class="btn" href="wireframe-cenador-roppongi.html">店舗を見る</a><a class="btn btn-o" href="wireframe-cenador-roppongi.html#reservation">予約する</a></div>
+      </div>
+    </article>
+        <p class="rs-add">3店舗目以降も、同じ型で、ここに並びます。</p>
+      </div>
+      <p class="note">店舗の紹介は、すべての店舗で同じ型にします。中身は店舗のCMSから読み込みます。店ごとの世界観は、写真とひとことで伝えます。</p>
+    </div>
+  </section>
+
+  <section class="sec sec-t">
+    <div class="wrap narrow">
+      <div class="sec-h"><h2 class="h2">NEWS</h2><a class="more" href="wireframe-news.html">一覧を見る<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+      <div>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.11.25</time><span class="tag">Cenador ROPPONGI</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="tag">OTB DINING</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="tag">X AZABUJUBAN</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-t">
+    <div class="wrap">
+      <div class="ph " style="--r:21/9;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店舗で働く人</span></div>
+      <div class="sec-h mt40"><div><h2 class="h2">RECRUIT</h2><p class="mt16">一文が入ります（30字程度）。</p></div>
+      <a class="more" href="wireframe-recruit.html">採用情報を見る<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+    </div>
+  </section>
 </main>
-<footer class="ft"><div class="museum"><div class="ph " style="--r:5/1;--rs:4/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>美術館のバナー（ロゴまたは写真）</span></div></div><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});
