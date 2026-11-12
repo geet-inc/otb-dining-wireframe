@@ -60,8 +60,10 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .ft-in{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
 .ft-links{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:12px}
 .ft-links a{display:inline-flex;align-items:center;min-height:44px}
-.ft-bottom{margin-top:40px;font-size:11px;color:var(--text-sub)}
-.museum{max-width:480px;margin:0 auto;padding-top:40px}
+.ft-bottom{font-size:11px;color:var(--text-sub)}
+.ft-museum{display:block;width:150px;margin-top:40px}
+.ft-museum .ph{font-size:11px;padding:4px}
+.ft-bottom{margin-top:16px}
 
 /* ナビの店舗一覧 */
 .dd{position:relative}
@@ -108,6 +110,10 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
 .hero-logo{position:absolute;background:#d9d9d9;color:#555;font-size:13px;display:flex;align-items:center;justify-content:center}
 .bar{display:none}
+.hs{display:flex;gap:24px;overflow-x:auto;padding:0 40px 24px;scroll-snap-type:x proximity;scroll-padding-left:40px}
+.hs>*{flex:0 0 38%;scroll-snap-align:start}
+.c .hs{gap:4px}
+.stk>*+*{margin-top:96px}
 .news-row{display:grid;grid-template-columns:110px 130px 1fr 16px;gap:16px;align-items:baseline;padding:18px 0;border-top:1px solid var(--border)}
 .news-row:last-child{border-bottom:1px solid var(--border)}
 .news-row .tag{font-size:12px;color:var(--text-sub)}
@@ -145,7 +151,6 @@ details.acc .in{padding:0 0 24px}
 
 /* Cenador ROPPONGI */
 .c .hero-logo{left:40px;bottom:40px;width:360px;height:120px}
-.c .hero .ph{justify-content:flex-end}
 .c .h2{font-size:26px;letter-spacing:.08em}
 .c .sec{padding-block:80px}
 .c .sec-t{padding-top:0}
@@ -230,6 +235,9 @@ textarea{min-height:180px;resize:vertical}
   .band{margin-top:96px}
   .rc{grid-template-columns:1fr;gap:32px}
   .sec-h{margin-bottom:24px}
+  .hs{gap:12px;padding:0 20px 16px;scroll-padding-left:20px}
+  .hs>*{flex-basis:78%}
+  .stk>*+*{margin-top:64px}
   .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:15;height:56px;align-items:center;justify-content:center;background:var(--text);color:#fff;font-size:13px;letter-spacing:.14em;font-weight:500}
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
@@ -274,8 +282,7 @@ textarea{min-height:180px;resize:vertical}
 <header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="店舗内メニュー"><a href="#gallery">GALLERY</a><a href="#menu">MENU</a><a href="#chef">CHEF</a><a href="#news">NEWS</a><a href="#access">ACCESS</a><a class="btn" href="#reservation">RESERVATION</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><a href="#gallery">GALLERY</a><a href="#menu">MENU</a><a href="#chef">CHEF</a><a href="#news">NEWS</a><a href="#access">ACCESS</a><a href="wireframe-top.html">OTB DINING TOP</a></nav></details></header>
 <main>
   <div class="hero">
-    <div class="ph fill lb" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
-    <div class="hero-logo">店舗ロゴ</div>
+    <div class="ph fill" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
   </div>
   <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">X AZABUJUBAN</h1>
 
@@ -286,26 +293,22 @@ textarea{min-height:180px;resize:vertical}
   </div>
 
   <section id="gallery" class="sec sec-t">
-    <div class="wrap narrow">
-      <h2 class="h2">GALLERY</h2>
-      <div class="x-rows mt64">
-        <figure><div class="ph " style="--r:3/2;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンターの特等席から眺める日本画</span></div><figcaption>作品名／作家名</figcaption></figure>
-        <div class="x-g2">
-          <figure><div class="ph " style="--r:4/5;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：現代日本画の全景</span></div><figcaption>作品名／作家名</figcaption></figure>
-          <figure><div class="ph " style="--r:1/1;--rs:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品のディテール</span></div></figure>
-        </div>
-        <figure class="x-solo"><div class="ph " style="--r:3/4;--rs:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品を1点だけ、美術館のように見せる</span></div><figcaption>作品名／作家名</figcaption></figure>
-      </div>
-      <p class="note">このページで、もっとも大きく扱う場所です。作品は定期的に入れ替わるため、写真と作品名を差し替えられる形にします。</p>
+    <div class="wrap narrow"><h2 class="h2">GALLERY</h2></div>
+    <div class="hs mt64" tabindex="0" aria-label="ギャラリー">
+      <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンターから眺める日本画</span></div>
+      <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：現代日本画の全景</span></div>
+      <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品のディテール</span></div>
+      <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：作品</span></div>
+      <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間</span></div>
     </div>
-    <div class="mt64"><div class="ph " style="--r:21/9;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室と照明の質感</span></div></div>
+    <div class="wrap narrow"><p class="note">同じ大きさの写真を、横に並べます。横にスクロールして、続きを見られます。作品は定期的に入れ替わるため、写真を差し替えられる形にします。</p></div>
   </section>
 
   <section id="menu" class="sec sec-t">
     <div class="wrap narrow">
       <h2 class="h2">MENU</h2>
       <div class="x-menu mt64">
-        <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：鮨を握る手元</span></div></div>
+        <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div></div>
         <div>
           <div class="course">
             <div class="course-h"><h3 class="h3">季節のおまかせコース</h3><span>13,200円／人</span></div>
@@ -339,13 +342,6 @@ textarea{min-height:180px;resize:vertical}
           <p class="note">コースは、1コース1項目で更新する想定です。コースが増えても、この並びのまま下に続きます。品数の多いドリンクのみ、PDFにする案です。</p>
         </div>
       </div>
-      <div class="x-rows" style="margin-top:96px">
-        <div class="ph " style="--r:16/9;--rs:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：季節を問わず使える一皿</span></div>
-        <div class="two">
-          <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：器</span></div>
-          <div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：お酒とワイン</span></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -358,34 +354,22 @@ textarea{min-height:180px;resize:vertical}
           <p class="small sub">料理長</p>
           <p class="h3">日高 慎伸</p>
           <p class="mt16">都内屈指の老舗料亭にて約10年間の研鑽を積んだ後、麻布の鮨店で大将を務める。会席や鮨のみならず、鰻、天麩羅、すき焼き、鉄板焼き、蕎麦など、幅広い分野で経験を重ね、技術を磨き上げてきた。</p>
-          <div class="mt40"><div class="ph " style="--r:3/2"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の風景</span></div></div>
           <p class="note">ご支給のプロフィールから、仮で抜粋しています。本文は100字程度です。お名前の漢字（高と髙）を、ご確認ください。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec-t" aria-label="STAFF">
-    <div class="wrap narrow">
-      <h2 class="h2">STAFF</h2>
-      <div class="x-staff mt64">
-        <figure><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：蕎麦打ちの手元</span></div></figure>
-        <figure><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：和服の女将による接客</span></div></figure>
-      </div>
-      <p class="note">お名前やプロフィールは置かず、仕事の様子を写真だけで見せます。</p>
-    </div>
-  </section>
-
   <section id="news" class="sec sec-t">
-    <div class="wrap narrow">
-      <div class="two">
+    <div class="wrap slim">
+      <div class="stk">
         <div class="news-c">
-          <h2 class="h2" style="text-align:left">NEWS</h2>
+          <h2 class="h2">NEWS</h2>
           <div class="mt24"><a class="news-row" href="wireframe-news-detail.html"><time>2026.08.25</time><span class="ttl">開店5周年と新体制移行のご案内</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.05.21</time><span class="ttl">価格改定のお知らせ</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.04.09</time><span class="ttl">4月の休業のお知らせ</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
           <a class="more mt16" href="wireframe-news.html">お知らせ一覧へ<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
         </div>
-        <div>
-          <h2 class="h2" style="text-align:left">INSTAGRAM</h2>
+        <div class="center">
+          <h2 class="h2">INSTAGRAM</h2>
           <p class="mt24">最新の様子は、Instagramで、お届けしています。</p>
           <a class="more mt8" href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>@x.azabujuban</a>
           <p class="note">静かな印象を保つため、投稿の一覧は置かず、リンクのみにしました。</p>
@@ -431,7 +415,7 @@ textarea{min-height:180px;resize:vertical}
   </section>
 </main>
 <a class="bar" href="#reservation">RESERVATION</a>
-<footer class="ft"><div class="museum"><div class="ph " style="--r:5/1;--rs:4/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>美術館のバナー（ロゴまたは写真）</span></div></div><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});
