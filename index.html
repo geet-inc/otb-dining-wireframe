@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>一覧｜OTB DINING ワイヤーフレーム</title>
+<title>トップページ｜OTB DINING ワイヤーフレーム</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -108,7 +108,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 
 /* 店舗共通 */
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
-.hero-logo{position:absolute;background:#d9d9d9;color:#555;font-size:13px;display:flex;align-items:center;justify-content:center}
+.store-logo{display:flex;align-items:center;justify-content:center;width:240px;height:96px;margin:0 auto 56px;background:#d9d9d9;color:#555;font-size:13px;font-weight:400}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .bar{display:none}
 .hs{display:flex;gap:24px;overflow-x:auto;padding:0 40px 24px;scroll-snap-type:x proximity;scroll-padding-left:40px}
 .hs>*{flex:0 0 38%;scroll-snap-align:start}
@@ -132,7 +133,6 @@ details.acc[open] summary::after{content:"\f068"}
 details.acc .in{padding:0 0 24px}
 
 /* X AZABUJUBAN */
-.x .hero-logo{left:50%;top:50%;width:200px;height:80px;transform:translate(-50%,-50%)}
 .x .h2{font-weight:500;letter-spacing:.14em;font-size:22px;text-align:center}
 .x .statement{padding-block:160px;text-align:center}
 .x-rows>*+*{margin-top:120px}
@@ -150,7 +150,6 @@ details.acc .in{padding:0 0 24px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 
 /* Cenador ROPPONGI */
-.c .hero-logo{left:40px;bottom:40px;width:360px;height:120px}
 .c .h2{font-size:26px;letter-spacing:.08em}
 .c .sec{padding-block:80px}
 .c .sec-t{padding-top:0}
@@ -191,8 +190,6 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 .job:last-child{border-bottom:1px solid var(--border)}
 .job-row{display:grid;grid-template-columns:150px 1fr;gap:12px 24px;margin-bottom:24px}
 .job-row dt{color:var(--text-sub);font-size:13px}
-.idx{display:grid;grid-template-columns:48px 1fr 200px 110px;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--border)}
-.idx:last-child{border-bottom:1px solid var(--border)}
 
 @media (max-width:900px){
   :root{--hd:56px}
@@ -240,6 +237,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
   .x .statement{padding-block:96px}
+  .store-logo{width:180px;height:72px;margin-bottom:40px}
   .x-rows>*+*{margin-top:72px}
   .x-g2{grid-template-columns:1fr;gap:48px}
   .x-g2 figure:last-child{margin-left:72px}
@@ -251,7 +249,6 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .x-staff figure:last-child{margin-top:0;margin-left:56px}
   .c .sec{padding-block:64px}
   .c .sec-t{padding-top:0}
-  .c .hero-logo{left:20px;bottom:20px;width:220px;height:80px}
   .c-head{padding:64px 20px 24px}
   .mosaic,.mosaic.rev{grid-template-columns:1fr}
   .m-b{grid-template-rows:none}
@@ -271,27 +268,88 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .job-row{grid-template-columns:1fr;gap:2px}
   .job-row dd{margin-bottom:12px}
   .job-row{margin-bottom:12px}
-  .idx{grid-template-columns:32px 1fr;gap:2px 8px}
-  .idx span:nth-child(n+3){grid-column:2;font-size:12px;color:var(--text-sub)}
-}
+    }
 </style>
 </head>
 <body class="">
+<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<main>
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">OTB DINING</h1>
+  <section class="fv">
+    <div class="ph " style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：2店舗の写真を混ぜて、ゆっくり切り替えます（5〜6枚）</span></div>
+    <div class="fv-side"><p class="fv-copy">コピーが、ここに入ります。</p><div class="fv-count" aria-hidden="true"><span>01 / 06</span><i></i></div></div>
+  </section>
+  <div class="wrap"><p class="note">ファーストビューは、写真だけで雰囲気を伝えます。空間、料理、手元など、2店舗の写真を混ぜて順番に見せ、店名は出しません。写真の横の余白には、コピーを置きます。スクロールに合わせて写真を動かす演出は、入れません。</p></div>
 
-<main class="wrap narrow" style="padding-bottom:120px">
-  <div class="page-h">
-    <h1 class="h1">OTB DINING ワイヤーフレーム</h1>
-    <p class="mt16 sub">第1版　2026年11月9日　株式会社Geet</p>
-  </div>
-  <div class="prose">
-    <p>ページの構成と、写真や文章の量を、確認いただくための資料です。</p>
-    <p>色や書体は、デザインの工程で決めます。そのため、ここでは白、黒、グレーのみで表しています。</p>
-    <p>グレーの枠は写真で、枠の縦横比は、仕上がりの目安です。</p>
-    <p>薄いグレーの帯は、補足のメモです。実際のサイトには、表示されません。</p>
-  </div>
-  <div class="mt40"><a class="idx" href="wireframe-top.html"><span class="sub">1</span><span>トップページ</span><span class="sub small">/</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-x-azabujuban.html"><span class="sub">2</span><span>X AZABUJUBAN</span><span class="sub small">/x-azabujuban</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-cenador-roppongi.html"><span class="sub">3</span><span>Cenador ROPPONGI</span><span class="sub small">/cenador-roppongi</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-news.html"><span class="sub">4</span><span>NEWS 一覧</span><span class="sub small">/news</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-news-detail.html"><span class="sub">5</span><span>NEWS 詳細</span><span class="sub small">/news/{slug}</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-recruit.html"><span class="sub">6</span><span>RECRUIT</span><span class="sub small">/recruit</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-entry.html"><span class="sub">7</span><span>ENTRY</span><span class="sub small">/entry</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-contact.html"><span class="sub">8</span><span>CONTACT</span><span class="sub small">/contact</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-thanks.html"><span class="sub">9</span><span>送信完了</span><span class="sub small">/thanks</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-privacy.html"><span class="sub">10</span><span>プライバシーポリシー</span><span class="sub small">/privacy</span><span class="small">ページを開く</span></a><a class="idx" href="wireframe-404.html"><span class="sub">11</span><span>404</span><span class="sub small">/404</span><span class="small">ページを開く</span></a></div>
+  <section class="lead">
+    <h2 class="lead-t">見出しが、ここに入ります。</h2>
+    <p class="mt40">ブランドの短い文章が、ここに入ります。2〜3行、80字程度です。会社の紹介ではなく、OTB DININGが大切にしていることを書きます。</p>
+  </section>
+
+  <section class="cg" aria-label="写真">
+    <div class="cg-a"><div class="ph " style="--r:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間（大）</span></div></div>
+    <div class="cg-b"><div class="ph " style="--r:6/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理（中）</span></div></div>
+    <div class="cg-c"><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：手元や器（小）</span></div></div>
+  </section>
+  <div class="wrap"><p class="note">写真だけのセクションです。大きさの違う3枚を、ずらして置きます。2店舗の写真を混ぜます。</p></div>
+
+  <section id="restaurants">
+    <div class="wrap rs-h"><h2 class="h2">RESTAURANTS</h2></div>
+    <div class="rs">
+      <article class="rs-row">
+      <div class="rs-main"><div class="ph " style="--r:4/3;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div></div>
+      <div class="rs-txt">
+        <h3 class="rs-name">X AZABUJUBAN</h3>
+        <p class="small sub mt8">麻布十番</p>
+        <p class="h3 mt40">店舗のコピーが入ります（20字程度）</p>
+        <p class="mt16">店舗の短い紹介が、ここに入ります。40字程度にとどめ、写真を主役にします。</p>
+        <div class="btns mt40"><a class="btn" href="wireframe-x-azabujuban.html">店舗を見る</a><a class="btn btn-o" href="wireframe-x-azabujuban.html#reservation">予約する</a></div>
+      </div>
+    </article><article class="rs-row">
+      <div class="rs-main"><div class="ph " style="--r:4/3;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div></div>
+      <div class="rs-txt">
+        <h3 class="rs-name">Cenador ROPPONGI</h3>
+        <p class="small sub mt8">六本木</p>
+        <p class="h3 mt40">店舗のコピーが入ります（20字程度）</p>
+        <p class="mt16">店舗の短い紹介が、ここに入ります。40字程度にとどめ、写真を主役にします。</p>
+        <div class="btns mt40"><a class="btn" href="wireframe-cenador-roppongi.html">店舗を見る</a><a class="btn btn-o" href="wireframe-cenador-roppongi.html#reservation">予約する</a></div>
+      </div>
+    </article>
+    </div>
+    <div class="wrap">
+      <p class="rs-add">3店舗目以降も、同じ型で、ここに並びます。写真の左右は、自動で交互になります。</p>
+      <p class="note">店舗ごとに、大きな写真1枚と、短い文章を置きます。型はすべての店舗で同じにし、中身は店舗のCMSから読み込みます。</p>
+    </div>
+  </section>
+
+  <section aria-label="写真">
+    <div class="band"><div class="ph " style="--r:21/8;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：横いっぱいの1枚</span></div></div>
+  </section>
+  <div class="wrap"><p class="note">写真だけのセクションです。横いっぱいの写真を、1枚置きます。</p></div>
+
+  <section class="sec">
+    <div class="wrap narrow">
+      <div class="sec-h"><h2 class="h2">NEWS</h2><a class="more" href="wireframe-news.html">一覧を見る<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+      <div>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.11.25</time><span class="tag">Cenador ROPPONGI</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="tag">OTB DINING</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        <a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="tag">X AZABUJUBAN</span><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-t">
+    <div class="wrap narrow rc">
+      <div>
+        <h2 class="h2">RECRUIT</h2>
+        <p class="mt24">一文が、ここに入ります（30字程度）。</p>
+        <a class="more mt24" href="wireframe-recruit.html">採用情報を見る<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店舗で働く人</span></div>
+    </div>
+  </section>
 </main>
-
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});

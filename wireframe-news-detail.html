@@ -108,7 +108,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 
 /* 店舗共通 */
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
-.hero-logo{position:absolute;background:#d9d9d9;color:#555;font-size:13px;display:flex;align-items:center;justify-content:center}
+.store-logo{display:flex;align-items:center;justify-content:center;width:240px;height:96px;margin:0 auto 56px;background:#d9d9d9;color:#555;font-size:13px;font-weight:400}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .bar{display:none}
 .hs{display:flex;gap:24px;overflow-x:auto;padding:0 40px 24px;scroll-snap-type:x proximity;scroll-padding-left:40px}
 .hs>*{flex:0 0 38%;scroll-snap-align:start}
@@ -132,7 +133,6 @@ details.acc[open] summary::after{content:"\f068"}
 details.acc .in{padding:0 0 24px}
 
 /* X AZABUJUBAN */
-.x .hero-logo{left:50%;top:50%;width:200px;height:80px;transform:translate(-50%,-50%)}
 .x .h2{font-weight:500;letter-spacing:.14em;font-size:22px;text-align:center}
 .x .statement{padding-block:160px;text-align:center}
 .x-rows>*+*{margin-top:120px}
@@ -150,7 +150,6 @@ details.acc .in{padding:0 0 24px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 
 /* Cenador ROPPONGI */
-.c .hero-logo{left:40px;bottom:40px;width:360px;height:120px}
 .c .h2{font-size:26px;letter-spacing:.08em}
 .c .sec{padding-block:80px}
 .c .sec-t{padding-top:0}
@@ -191,8 +190,6 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 .job:last-child{border-bottom:1px solid var(--border)}
 .job-row{display:grid;grid-template-columns:150px 1fr;gap:12px 24px;margin-bottom:24px}
 .job-row dt{color:var(--text-sub);font-size:13px}
-.idx{display:grid;grid-template-columns:48px 1fr 200px 110px;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--border)}
-.idx:last-child{border-bottom:1px solid var(--border)}
 
 @media (max-width:900px){
   :root{--hd:56px}
@@ -240,6 +237,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
   .x .statement{padding-block:96px}
+  .store-logo{width:180px;height:72px;margin-bottom:40px}
   .x-rows>*+*{margin-top:72px}
   .x-g2{grid-template-columns:1fr;gap:48px}
   .x-g2 figure:last-child{margin-left:72px}
@@ -251,7 +249,6 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .x-staff figure:last-child{margin-top:0;margin-left:56px}
   .c .sec{padding-block:64px}
   .c .sec-t{padding-top:0}
-  .c .hero-logo{left:20px;bottom:20px;width:220px;height:80px}
   .c-head{padding:64px 20px 24px}
   .mosaic,.mosaic.rev{grid-template-columns:1fr}
   .m-b{grid-template-rows:none}
@@ -271,13 +268,11 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .job-row{grid-template-columns:1fr;gap:2px}
   .job-row dd{margin-bottom:12px}
   .job-row{margin-bottom:12px}
-  .idx{grid-template-columns:32px 1fr;gap:2px 8px}
-  .idx span:nth-child(n+3){grid-column:2;font-size:12px;color:var(--text-sub)}
-}
+    }
 </style>
 </head>
 <body class="">
-<header class="hd"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="wireframe-top.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html" aria-current="page">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html" aria-current="page">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html" aria-current="page">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html" aria-current="page">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
 <main class="wrap slim">
   <div class="page-h">
     <p class="small sub"><time>2026.08.25</time>　X AZABUJUBAN</p>
@@ -292,7 +287,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   <div class="center mt64"><a class="btn btn-o" href="wireframe-news.html">お知らせ一覧へ</a></div>
   <div class="mt64"></div>
 </main>
-<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="wireframe-top.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});
