@@ -108,7 +108,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 
 /* 店舗共通 */
 .hero{position:relative;height:calc(100svh - var(--hd));min-height:480px}
-.store-logo{display:flex;align-items:center;justify-content:center;width:240px;height:96px;margin:0 auto 56px;background:#d9d9d9;color:#555;font-size:13px;font-weight:400}
+.hero .ph{justify-content:center;align-items:flex-end;padding-bottom:24px}
+.hero-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:240px;height:96px;background:#d9d9d9;color:#555;font-size:13px;font-weight:400}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .bar{display:none}
 .hs{display:flex;gap:24px;overflow-x:auto;padding:0 40px 24px;scroll-snap-type:x proximity;scroll-padding-left:40px}
@@ -237,7 +238,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .has-bar{padding-bottom:56px}
   .has-bar .hero{height:calc(100svh - var(--hd) - 56px)}
   .x .statement{padding-block:96px}
-  .store-logo{width:180px;height:72px;margin-bottom:40px}
+  .hero-logo{width:180px;height:72px}
   .x-rows>*+*{margin-top:72px}
   .x-g2{grid-template-columns:1fr;gap:48px}
   .x-g2 figure:last-child{margin-left:72px}
@@ -276,9 +277,9 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 <main>
   <div class="hero">
     <div class="ph fill" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：代表的な料理を、大胆に寄って</span></div>
+    <h1 class="hero-logo">店舗ロゴ<span class="sr">Cenador ROPPONGI</span></h1>
   </div>
   <div class="wrap slim statement">
-    <h1 class="store-logo">店舗ロゴ<span class="sr">Cenador ROPPONGI</span></h1>
     <p class="h3">見出しが、ここに入ります。</p>
     <p class="mt24 sub">店舗の短い説明が、ここに入ります。40字程度です。</p>
     <p class="note">見出しは20字程度、本文は40字程度です。店舗の説明は、ここだけにします。</p>
