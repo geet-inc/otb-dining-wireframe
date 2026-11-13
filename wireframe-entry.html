@@ -183,6 +183,7 @@ input[type=radio],input[type=checkbox]{margin:0}
 .req{font-size:11px;color:var(--text-sub);font-weight:400;margin-left:8px}
 input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;min-height:48px;padding:10px 12px;border:1px solid #bbb;border-radius:2px;background:var(--bg);font:inherit;font-size:16px;color:var(--text)}
 textarea{min-height:180px;resize:vertical}
+input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed #bbb;border-radius:2px;font:inherit;font-size:13px}
 .opts{display:flex;flex-wrap:wrap;gap:0 28px}
 .opts label{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px}
 .notice{background:var(--note-bg);padding:24px;border-radius:2px}
@@ -287,7 +288,8 @@ textarea{min-height:180px;resize:vertical}
     <div class="field"><label for="kana">ふりがな<span class="req">必須</span></label><input id="kana" name="kana" type="text" required></div>
     <div class="field"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
     <div class="field"><label for="tel">電話番号<span class="req">必須</span></label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
-    <div class="field"><label for="career">職務経歴<span class="req">必須</span></label><textarea id="career" name="career" required></textarea></div>
+    <div class="field"><label for="resume">履歴書<span class="req">任意</span></label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"><p class="small sub mt8">PDF、Word、画像のいずれか。5MBまでです。</p></div>
+    <div class="field"><label for="cv">職務経歴書<span class="req">任意</span></label><input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"><p class="small sub mt8">PDF、Word、画像のいずれか。5MBまでです。</p></div>
     <div class="field"><label for="message">ご質問など<span class="req">任意</span></label><textarea id="message" name="message"></textarea></div>
     <div class="field"><div class="opts"><label><input type="checkbox" name="agree" required><span><a href="wireframe-privacy.html" style="text-decoration:underline">プライバシーポリシー</a>に、同意します。</span></label></div></div>
     <div class="center mt40"><button class="btn" type="submit">送信する</button></div>
