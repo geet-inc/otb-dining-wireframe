@@ -76,12 +76,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .spnav nav .sp-s{padding-left:16px}
 
 /* トップ */
-.fv{position:relative;padding-right:13.5%;height:calc(100svh - var(--hd) - 40px);min-height:520px}
+.fv{position:relative;height:calc(100svh - var(--hd) - 40px);min-height:520px}
 .fv>.ph{height:100%;aspect-ratio:auto}
-.fv-side{position:absolute;right:0;top:0;bottom:0;width:13.5%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:48px 0 8px}
-.fv-copy{writing-mode:vertical-rl;font-size:22px;font-weight:500;line-height:2;letter-spacing:.2em}
-.fv-count{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:11px;color:var(--text-sub)}
-.fv-count i{width:1px;height:48px;background:#bbb}
 .lead{padding:160px 40px 140px 14%;max-width:1280px}
 .lead-t{font-size:30px;font-weight:500;line-height:1.7;letter-spacing:.1em}
 .lead p{max-width:480px}
@@ -99,6 +95,7 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .rs-name{font-size:26px;font-weight:500;letter-spacing:.08em}
 .rs-add{border:1px dashed #bbb;padding:32px;text-align:center;color:var(--text-sub);font-size:12px;margin-top:160px}
 .band{margin-top:160px}
+.cg-after{margin-top:160px}
 .rc{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:center}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:40px}
 .ft-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:40px;padding-bottom:56px;border-bottom:1px solid var(--border)}
@@ -171,6 +168,8 @@ details.acc .in{padding:0 0 24px}
 .m-row span:last-child{white-space:nowrap}
 .c-three{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .c-three .t{padding:12px 20px 0}
+.c-two{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.c-two .t{padding:12px 20px 0}
 .c-person{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
 .c-person.rev{grid-template-columns:5fr 7fr}
 .c-info{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
@@ -218,12 +217,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
   .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
   .ft{padding:64px 20px 32px}
-  .fv{padding-right:20px;height:auto;min-height:0}
+  .fv{height:auto;min-height:0}
   .fv>.ph{height:auto;aspect-ratio:4/5}
-  .fv-side{position:static;width:auto;flex-direction:column-reverse;align-items:flex-start;gap:32px;padding:12px 20px 0}
-  .fv-copy{writing-mode:horizontal-tb;font-size:20px;letter-spacing:.1em}
-  .fv-count{flex-direction:row}
-  .fv-count i{width:32px;height:1px}
   .lead{padding:88px 20px 72px}
   .lead-t{font-size:22px}
   .cg-a{grid-column:1/11;grid-row:auto;margin-top:0}
@@ -238,6 +233,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .rs-name{font-size:22px}
   .rs-add{margin-top:72px}
   .band{margin-top:96px}
+  .cg-after{margin-top:96px}
   .rc{grid-template-columns:1fr;gap:32px}
   .sec-h{margin-bottom:24px}
   .hs{gap:12px;padding:0 20px 16px;scroll-padding-left:20px}
@@ -256,7 +252,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .x-sticky{position:static}
   .x-staff{grid-template-columns:1fr;gap:40px}
   .x-room{grid-template-columns:1fr;gap:32px}
-  .x-three{grid-template-columns:1fr;gap:16px}
+  .x-three{grid-template-columns:1fr;gap:48px}
   .x-staff figure:first-child{margin-right:56px}
   .x-staff figure:last-child{margin-top:0;margin-left:56px}
   .c .sec{padding-block:64px}
@@ -266,8 +262,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .m-b{grid-template-rows:none}
   .m-b .dish,.m-b .ph{height:auto}
   .m-b .ph{aspect-ratio:var(--rs,1/1)}
-  .c-three{grid-template-columns:1fr}
-  .c-three .t{padding:12px 20px 16px}
+  .c-three,.c-two{grid-template-columns:1fr}
+  .c-three .t,.c-two .t{padding:12px 20px 16px}
   .c-person,.c-person.rev{grid-template-columns:1fr;gap:24px}
   .c .hero-logo{left:20px;bottom:20px}
   .c .hero .ph{padding:16px 20px}
@@ -322,21 +318,19 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div>
           <div class="course">
             <div class="course-h"><h3 class="h3">季節のおまかせコース</h3><span>13,200円／人</span></div>
-            <p class="small sub mt8">全8品。2026年11月の一例です。</p>
-            <dl class="course-list">
-              <dt>先付け</dt><dd>小鉢四種</dd>
-              <dt>冷菜</dt><dd>季節の握り鮨　二貫</dd>
-              <dt>蒸物</dt><dd>百合根入り茶碗蒸し</dd>
-              <dt>揚物</dt><dd>舞茸と雲子の天麩羅</dd>
-              <dt>魚料理</dt><dd>鰤しゃぶ</dd>
-              <dt>肉料理</dt><dd>豚の角煮</dd>
-              <dt>御食事</dt><dd>冷たいとろろ蕎麦</dd>
-              <dt>甘味</dt><dd>卵黄のあいす</dd>
-            </dl>
+            <p class="mt8">コースの説明が、ここに入ります。40字程度です。</p>
+          </div>
+          <div class="course">
+            <div class="course-h"><h3 class="h3">料理人おまかせコース（仮称）</h3><span>00,000円／人</span></div>
+            <p class="mt8">コースの説明が、ここに入ります。40字程度です。</p>
           </div>
           <div class="course">
             <div class="course-h"><h3 class="h3">晩酌セット</h3><span>6,600円／人</span></div>
-            <p class="mt8">旬の小鉢と本日の一品に、アラカルトを、お好みで追加いただけます。</p>
+            <p class="mt8">セットの説明が、ここに入ります。40字程度です。</p>
+          </div>
+          <div class="course">
+            <p>お料理の詳細は、食べログでご覧いただけます。</p>
+            <a class="more mt8" href="#">食べログでメニューを見る<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
           <div class="course">
             <div class="course-h"><h3 class="h3">ドリンク</h3></div>
@@ -349,7 +343,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
             <li>季節や仕入れにより、お料理の内容が変わる場合がございます。</li>
             <li>アレルギーや食事制限は、ご予約時にご相談ください。</li>
           </ul>
-          <p class="note">コースは、1コース1項目で更新する想定です。コースが増えても、この並びのまま下に続きます。品数の多いドリンクのみ、PDFにする案です。</p>
+          <p class="note">コースは、料金と短い説明だけを載せ、詳細は食べログへ案内します。上位コースは年明けに追加の予定で、内容は実装時に差し替えます。ドリンクは、PDFで掲載します。</p>
         </div>
       </div>
     </div>
@@ -370,23 +364,36 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
     </div>
   </section>
 
-  <section id="private-room" class="sec sec-t">
+  <section id="features" class="sec sec-t">
     <div class="wrap narrow">
-      <div class="x-room">
-        <div class="ph " style="--r:1/1;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div>
+      <h2 class="h2">FEATURES（仮）</h2>
+      <div class="x-three mt64">
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：蕎麦を打つ手元</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：鮨を握る手元</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：日本酒を注ぐ接客</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+      </div>
+      <p class="note">お店の特徴を、3つ紹介します。名前や顔は出さず、お店の風景として見せます。</p>
+    </div>
+  </section>
+
+  <section id="space" class="sec sec-t">
+    <div class="wrap narrow">
+      <h2 class="h2">SPACE</h2>
+      <div class="two mt64">
         <div>
-          <h2 class="h2" style="text-align:left">PRIVATE ROOM</h2>
-          <p class="h3 mt16">個室</p>
-          <p class="mt24">個室の紹介が、ここに入ります。人数、使い方、雰囲気などを、100字程度で書きます。</p>
+          <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div>
+          <p class="h3 mt24">個室</p>
+          <p class="mt16">個室の紹介が、ここに入ります。人数、使い方、雰囲気などを、100字程度で書きます。</p>
           <p class="small sub mt16">最大6名　＊料金やご利用の条件が入ります。</p>
         </div>
+        <div>
+          <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンター</span></div>
+          <p class="h3 mt24">カウンター</p>
+          <p class="mt16">カウンターの紹介が、ここに入ります。席のゆとり、目の前の作品などを、100字程度で書きます。</p>
+          <p class="small sub mt16">8席</p>
+        </div>
       </div>
-      <div class="x-three mt64">
-        <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店内の雰囲気</span></div>
-        <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店内の雰囲気</span></div>
-        <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店内の雰囲気</span></div>
-      </div>
-      <p class="note">個室の紹介と、店内の雰囲気が分かる写真3枚です。現行サイトにある内容を引き継ぎます。</p>
+      <p class="note">個室とカウンターを、同じ大きさで並べて紹介します。</p>
     </div>
   </section>
 
@@ -422,6 +429,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
             <dt>席数</dt><dd>カウンター8席、個室1室（最大6名）</dd>
           </dl>
           <div class="mt40"><details class="acc"><summary>キャンセルについて</summary><div class="in sub">キャンセルの規定が入ります。100字程度です。</div></details><details class="acc"><summary>お子さま、ペットのご同伴について</summary><div class="in sub">ご利用の条件が入ります。100字程度です。</div></details></div>
+          <p class="note">テイクアウトやケータリングなど、よくあるご質問があれば、ここに追加します。</p>
         </div>
         <div>
           <div class="ph " style="--r:4/3;--rs:4/3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>地図</span></div>

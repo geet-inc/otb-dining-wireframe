@@ -76,12 +76,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .spnav nav .sp-s{padding-left:16px}
 
 /* トップ */
-.fv{position:relative;padding-right:13.5%;height:calc(100svh - var(--hd) - 40px);min-height:520px}
+.fv{position:relative;height:calc(100svh - var(--hd) - 40px);min-height:520px}
 .fv>.ph{height:100%;aspect-ratio:auto}
-.fv-side{position:absolute;right:0;top:0;bottom:0;width:13.5%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:48px 0 8px}
-.fv-copy{writing-mode:vertical-rl;font-size:22px;font-weight:500;line-height:2;letter-spacing:.2em}
-.fv-count{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:11px;color:var(--text-sub)}
-.fv-count i{width:1px;height:48px;background:#bbb}
 .lead{padding:160px 40px 140px 14%;max-width:1280px}
 .lead-t{font-size:30px;font-weight:500;line-height:1.7;letter-spacing:.1em}
 .lead p{max-width:480px}
@@ -99,6 +95,7 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .rs-name{font-size:26px;font-weight:500;letter-spacing:.08em}
 .rs-add{border:1px dashed #bbb;padding:32px;text-align:center;color:var(--text-sub);font-size:12px;margin-top:160px}
 .band{margin-top:160px}
+.cg-after{margin-top:160px}
 .rc{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:center}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:40px}
 .ft-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:40px;padding-bottom:56px;border-bottom:1px solid var(--border)}
@@ -171,6 +168,8 @@ details.acc .in{padding:0 0 24px}
 .m-row span:last-child{white-space:nowrap}
 .c-three{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .c-three .t{padding:12px 20px 0}
+.c-two{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.c-two .t{padding:12px 20px 0}
 .c-person{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
 .c-person.rev{grid-template-columns:5fr 7fr}
 .c-info{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
@@ -218,12 +217,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
   .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
   .ft{padding:64px 20px 32px}
-  .fv{padding-right:20px;height:auto;min-height:0}
+  .fv{height:auto;min-height:0}
   .fv>.ph{height:auto;aspect-ratio:4/5}
-  .fv-side{position:static;width:auto;flex-direction:column-reverse;align-items:flex-start;gap:32px;padding:12px 20px 0}
-  .fv-copy{writing-mode:horizontal-tb;font-size:20px;letter-spacing:.1em}
-  .fv-count{flex-direction:row}
-  .fv-count i{width:32px;height:1px}
   .lead{padding:88px 20px 72px}
   .lead-t{font-size:22px}
   .cg-a{grid-column:1/11;grid-row:auto;margin-top:0}
@@ -238,6 +233,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .rs-name{font-size:22px}
   .rs-add{margin-top:72px}
   .band{margin-top:96px}
+  .cg-after{margin-top:96px}
   .rc{grid-template-columns:1fr;gap:32px}
   .sec-h{margin-bottom:24px}
   .hs{gap:12px;padding:0 20px 16px;scroll-padding-left:20px}
@@ -256,7 +252,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .x-sticky{position:static}
   .x-staff{grid-template-columns:1fr;gap:40px}
   .x-room{grid-template-columns:1fr;gap:32px}
-  .x-three{grid-template-columns:1fr;gap:16px}
+  .x-three{grid-template-columns:1fr;gap:48px}
   .x-staff figure:first-child{margin-right:56px}
   .x-staff figure:last-child{margin-top:0;margin-left:56px}
   .c .sec{padding-block:64px}
@@ -266,8 +262,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .m-b{grid-template-rows:none}
   .m-b .dish,.m-b .ph{height:auto}
   .m-b .ph{aspect-ratio:var(--rs,1/1)}
-  .c-three{grid-template-columns:1fr}
-  .c-three .t{padding:12px 20px 16px}
+  .c-three,.c-two{grid-template-columns:1fr}
+  .c-three .t,.c-two .t{padding:12px 20px 16px}
   .c-person,.c-person.rev{grid-template-columns:1fr;gap:24px}
   .c .hero-logo{left:20px;bottom:20px}
   .c .hero .ph{padding:16px 20px}
@@ -312,10 +308,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div class="dish"><div class="ph " style="--r:3/2;--rs:1/1"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：定番の料理</span></div><span class="dish-n">ハンバーグ</span></div>
       </div>
     </div>
-    <div class="c-season">
-      <div class="dish"><div class="ph " style="--r:16/9;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：季節の料理（店舗で差し替え）</span></div><span class="dish-n">季節の一皿</span></div>
-    </div>
-    <div class="wrap"><p class="note">定番の3品を、大1枚と小2枚で見せます。料理名だけを添え、説明は置きません。「季節の一皿」は、店舗で写真と料理名を差し替えられる形にします。</p></div>
+    <div class="wrap"><p class="note">定番の3品を、大1枚と小2枚で見せます。料理名だけを添え、説明は置きません。</p></div>
   </section>
 
   <section id="menu" class="sec">
@@ -324,16 +317,23 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
       <div class="x-menu mt40">
         <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div></div>
         <div>
-          <div class="course"><h3 class="h3">アラカルト</h3><div class="mt16"><div class="m-row"><span>ラザニア</span><span>0,000円</span></div><div class="m-row"><span>ナポリタン</span><span>0,000円</span></div><div class="m-row"><span>ハンバーグ</span><span>0,000円</span></div><div class="m-row"><span>料理名が入ります<small>説明は20字程度です。</small></span><span>0,000円</span></div><div class="m-row"><span>料理名が入ります</span><span>0,000円</span></div><div class="m-row"><span>料理名が入ります</span><span>0,000円</span></div></div></div>
+          <div class="course"><h3 class="h3">代表的な料理</h3><div class="mt16"><div class="m-row"><span>ラザニア</span><span>0,000円</span></div><div class="m-row"><span>ナポリタン</span><span>0,000円</span></div><div class="m-row"><span>ハンバーグ</span><span>0,000円</span></div><div class="m-row"><span>料理名が入ります</span><span>0,000円</span></div></div></div>
           <div class="course"><h3 class="h3">コース</h3><div class="mt16"><div class="m-row"><span>コース名が入ります<small>内容の説明は、40字程度です。</small></span><span>0,000円</span></div><div class="m-row"><span>コース名が入ります<small>内容の説明は、40字程度です。</small></span><span>0,000円</span></div></div></div>
-          <div class="course"><h3 class="h3">デザート</h3><div class="mt16"><div class="m-row"><span>デザート名が入ります</span><span>0,000円</span></div><div class="m-row"><span>デザート名が入ります</span><span>0,000円</span></div><div class="m-row"><span>デザート名が入ります</span><span>0,000円</span></div></div></div>
-          <div class="course"><h3 class="h3">ドリンク</h3><div class="mt16"><div class="m-row"><span>ワイン（グラス）</span><span>0,000円〜</span></div><div class="m-row"><span>ワイン（ボトル）</span><span>0,000円〜</span></div><div class="m-row"><span>カクテル、リキュール</span><span>0,000円〜</span></div><div class="m-row"><span>ソフトドリンク</span><span>0,000円〜</span></div></div></div>
+          <div class="course">
+            <p>お料理の詳細は、食べログでご覧いただけます。</p>
+            <a class="more mt8" href="#">食べログでメニューを見る<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+          <div class="course">
+            <div class="course-h"><h3 class="h3">ドリンク</h3></div>
+            <p class="mt8">ワイン、カクテルなどを、ご用意しています。</p>
+            <a class="more mt8" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>ドリンクメニューを見る</a>
+          </div>
           <ul class="small sub mt40">
             <li>表示価格は、税込です。</li>
             <li>季節や仕入れにより、メニューの内容が変わる場合がございます。</li>
             <li>アレルギーや食事制限は、ご予約時にご相談ください。</li>
           </ul>
-          <p class="note">1品ずつ、料理名、価格、説明、カテゴリーを更新できる想定です。PDFで掲載する場合は、カテゴリーごとのリンクに置き換えます。</p>
+          <p class="note">代表的な料理とコースだけを載せ、詳細は食べログへ案内します。ドリンクは、PDFで掲載します。</p>
         </div>
       </div>
     </div>
@@ -341,42 +341,55 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 
   <section id="chef" class="sec sec-t">
     <div class="wrap">
-      <h2 class="h2">CHEF / PÂTISSIÈRE</h2>
-      <div class="c-pair mt40">
-        <div>
-          <div class="c-pp"><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：シェフのポートレート</span></div><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の手元</span></div></div>
-          <p class="small sub mt24">シェフ</p>
+      <h2 class="h2">CHEF</h2>
+      <div class="c-person mt40">
+        <div class="c-pp"><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：シェフのポートレート</span></div><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の手元</span></div></div>
+        <div class="c-txt">
+          <p class="small sub">シェフ</p>
           <p class="h3">坂本 昌彦</p>
           <p class="mt16">ジャンルの枠を越え、ただひたすら情熱的に「美味しい」を追求。フランス南部や、スペインのカタルーニャ、バスクで経験を積み、帰国後は都内のビストロやワインバーで多彩な料理に携わる。</p>
         </div>
-        <div>
-          <div class="c-pp"><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：パティシエのポートレート</span></div><div class="ph " style="--r:3/4"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：製菓の手元</span></div></div>
-          <p class="small sub mt24">パティシエ</p>
-          <p class="h3">伊藤 美奈</p>
-          <p class="mt16">繊細な技術と豊かな感性を生かし、味わいはもちろん、香りや質感、美しさまで丁寧に表現する。老舗パティスリーをはじめ、星付きレストランでのデザート制作など、多様な現場で経験を積む。</p>
-        </div>
       </div>
-      <p class="note">2人を左右に並べ、それぞれポートレートと手元の写真を置きます。プロフィールは、ご支給の文章から仮で抜粋しています。本文は、それぞれ100字程度です。パティシエの写真は、作品や後ろ姿にも置き換えられます。</p>
+      <p class="note">シェフのポートレートと、手元の写真を置きます。プロフィールは、ご支給の文章から仮で抜粋しています。本文は、100字程度です。</p>
     </div>
+  </section>
+
+  <section id="features" class="sec sec-t">
+    <div class="c-head" style="padding-top:0"><h2 class="h2">FEATURES（仮）</h2></div>
+    <div class="c-three">
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：ワイン</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：パティシエの手元（デザート）</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+    </div>
+    <div class="wrap"><p class="note">お店の特徴を、3つ紹介します。パティシエがいることは、ここで伝えます。名前は出しません。</p></div>
   </section>
 
   <section id="space">
     <div class="c-head" style="padding-top:0"><h2 class="h2">SPACE</h2></div>
     <div class="stack4">
       <div class="ph " style="--r:21/9;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：店内の全景</span></div>
-      <div class="c-three">
-        <div><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンター</span></div><div class="t"><p class="h3">カウンター</p><p class="small sub">6席</p></div></div>
-        <div><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：テーブル</span></div><div class="t"><p class="h3">テーブル</p><p class="small sub">最大12名</p></div></div>
-        <div><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div><div class="t"><p class="h3">個室</p><p class="small sub">最大8名</p></div></div>
+      <div class="c-two">
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンター・フロア</span></div><div class="t"><p class="h3">カウンター・フロア</p><p class="mt8">空間の紹介が、ここに入ります。40字程度です。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div><div class="t"><p class="h3">個室</p><p class="mt8">個室の紹介が、ここに入ります。40字程度です。</p><p class="small sub mt8">最大8名　＊料金やご利用の条件が入ります。</p></div></div>
       </div>
     </div>
   </section>
 
   <section id="news" class="sec">
-    <div class="wrap news-c">
-      <h2 class="h2">NEWS</h2>
-      <div class="mt24"><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
-      <a class="more mt16" href="wireframe-news.html">お知らせ一覧へ<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+    <div class="wrap">
+      <div class="stk">
+        <div class="news-c">
+          <h2 class="h2">NEWS</h2>
+          <div class="mt24"><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a><a class="news-row" href="wireframe-news-detail.html"><time>2026.00.00</time><span class="ttl">お知らせのタイトルが入ります</span><i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+          <a class="more mt16" href="wireframe-news.html">お知らせ一覧へ<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+        </div>
+        <div>
+          <h2 class="h2">INSTAGRAM</h2>
+          <p class="mt24">最新の様子は、Instagramで、お届けしています。</p>
+          <a class="more mt8" href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagramを見る</a>
+          <p class="note">投稿の一覧は置かず、リンクのみにします。</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -384,14 +397,16 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
     <div class="wrap">
       <h2 class="h2">INFORMATION / ACCESS</h2>
       <div class="c-info mt40">
+        <div>
         <dl class="info">
           <dt>住所</dt><dd>〒106-0032<br>東京都港区六本木7-18-15 六本木718 3F</dd>
           <dt>アクセス</dt><dd>最寄り駅からの道順が入ります。</dd>
           <dt>電話</dt><dd><a href="tel:0368129410">03-6812-9410</a></dd>
           <dt>営業時間</dt><dd>18:00〜23:00（L.O. 22:00）</dd>
           <dt>定休日</dt><dd>日曜日、ほか不定休</dd>
-          <dt>席数</dt><dd>カウンター6席、テーブル最大12名、個室1室（最大8名）</dd>
         </dl>
+        <div class="mt40"><details class="acc"><summary>キャンセルについて</summary><div class="in sub">キャンセルの規定が入ります。100字程度です。</div></details><details class="acc"><summary>お子さま、ペットのご同伴について</summary><div class="in sub">ご利用の条件が入ります。100字程度です。</div></details></div>
+        </div>
         <div>
           <div class="ph " style="--r:16/9;--rs:4/3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>地図</span></div>
           <a class="more mt8" href="#">Googleマップで開く<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>

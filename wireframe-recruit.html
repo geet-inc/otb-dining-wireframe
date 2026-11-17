@@ -76,12 +76,8 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .spnav nav .sp-s{padding-left:16px}
 
 /* トップ */
-.fv{position:relative;padding-right:13.5%;height:calc(100svh - var(--hd) - 40px);min-height:520px}
+.fv{position:relative;height:calc(100svh - var(--hd) - 40px);min-height:520px}
 .fv>.ph{height:100%;aspect-ratio:auto}
-.fv-side{position:absolute;right:0;top:0;bottom:0;width:13.5%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:48px 0 8px}
-.fv-copy{writing-mode:vertical-rl;font-size:22px;font-weight:500;line-height:2;letter-spacing:.2em}
-.fv-count{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:11px;color:var(--text-sub)}
-.fv-count i{width:1px;height:48px;background:#bbb}
 .lead{padding:160px 40px 140px 14%;max-width:1280px}
 .lead-t{font-size:30px;font-weight:500;line-height:1.7;letter-spacing:.1em}
 .lead p{max-width:480px}
@@ -99,6 +95,7 @@ figcaption{font-size:12px;color:var(--text-sub);margin-top:12px}
 .rs-name{font-size:26px;font-weight:500;letter-spacing:.08em}
 .rs-add{border:1px dashed #bbb;padding:32px;text-align:center;color:var(--text-sub);font-size:12px;margin-top:160px}
 .band{margin-top:160px}
+.cg-after{margin-top:160px}
 .rc{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:center}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:40px}
 .ft-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:40px;padding-bottom:56px;border-bottom:1px solid var(--border)}
@@ -171,6 +168,8 @@ details.acc .in{padding:0 0 24px}
 .m-row span:last-child{white-space:nowrap}
 .c-three{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .c-three .t{padding:12px 20px 0}
+.c-two{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.c-two .t{padding:12px 20px 0}
 .c-person{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
 .c-person.rev{grid-template-columns:5fr 7fr}
 .c-info{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
@@ -218,12 +217,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .spnav nav{position:absolute;left:0;right:0;top:var(--hd);background:var(--bg);padding:16px 20px 32px;height:calc(100svh - var(--hd));overflow:auto}
   .spnav nav a{display:flex;align-items:center;min-height:52px;font-size:15px}
   .ft{padding:64px 20px 32px}
-  .fv{padding-right:20px;height:auto;min-height:0}
+  .fv{height:auto;min-height:0}
   .fv>.ph{height:auto;aspect-ratio:4/5}
-  .fv-side{position:static;width:auto;flex-direction:column-reverse;align-items:flex-start;gap:32px;padding:12px 20px 0}
-  .fv-copy{writing-mode:horizontal-tb;font-size:20px;letter-spacing:.1em}
-  .fv-count{flex-direction:row}
-  .fv-count i{width:32px;height:1px}
   .lead{padding:88px 20px 72px}
   .lead-t{font-size:22px}
   .cg-a{grid-column:1/11;grid-row:auto;margin-top:0}
@@ -238,6 +233,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .rs-name{font-size:22px}
   .rs-add{margin-top:72px}
   .band{margin-top:96px}
+  .cg-after{margin-top:96px}
   .rc{grid-template-columns:1fr;gap:32px}
   .sec-h{margin-bottom:24px}
   .hs{gap:12px;padding:0 20px 16px;scroll-padding-left:20px}
@@ -256,7 +252,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .x-sticky{position:static}
   .x-staff{grid-template-columns:1fr;gap:40px}
   .x-room{grid-template-columns:1fr;gap:32px}
-  .x-three{grid-template-columns:1fr;gap:16px}
+  .x-three{grid-template-columns:1fr;gap:48px}
   .x-staff figure:first-child{margin-right:56px}
   .x-staff figure:last-child{margin-top:0;margin-left:56px}
   .c .sec{padding-block:64px}
@@ -266,8 +262,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .m-b{grid-template-rows:none}
   .m-b .dish,.m-b .ph{height:auto}
   .m-b .ph{aspect-ratio:var(--rs,1/1)}
-  .c-three{grid-template-columns:1fr}
-  .c-three .t{padding:12px 20px 16px}
+  .c-three,.c-two{grid-template-columns:1fr}
+  .c-three .t,.c-two .t{padding:12px 20px 16px}
   .c-person,.c-person.rev{grid-template-columns:1fr;gap:24px}
   .c .hero-logo{left:20px;bottom:20px}
   .c .hero .ph{padding:16px 20px}
@@ -294,19 +290,14 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 <main>
   <div class="wrap narrow"><div class="page-h"><h1 class="h1">RECRUIT</h1></div></div>
   <div class="ph " style="--r:21/9;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理と接客の風景</span></div>
-  <div class="wrap slim sec center">
-    <p class="h3">料理と空間で、人をよろこばせる。</p>
-    <p class="mt24 sub">お店の魅力に、共感してくださる方を、募集しています。</p>
-    <p class="note">見出しと本文は、仮の文章です。見出しは20字程度、本文は60字程度です。</p>
-  </div>
-  <section class="wrap narrow">
+  <section class="wrap narrow sec">
     <h2 class="h2">募集店舗</h2>
     <div class="two mt40">
       <a href="wireframe-x-azabujuban.html"><div class="ph " style="--r:3/2"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：X AZABUJUBAN</span></div><p class="h3 mt16">X AZABUJUBAN</p><p class="small sub">麻布十番</p></a>
       <a href="wireframe-cenador-roppongi.html"><div class="ph " style="--r:3/2"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：Cenador ROPPONGI</span></div><p class="h3 mt16">Cenador ROPPONGI</p><p class="small sub">六本木</p></a>
     </div>
   </section>
-  <section class="wrap narrow sec">
+  <section class="wrap narrow sec sec-t">
     <h2 class="h2">募集要項</h2>
     <div class="mt40"><div class="job"><h3 class="h3">調理スタッフ</h3><dl class="job-row mt24"><dt>募集店舗</dt><dd>X AZABUJUBAN、Cenador ROPPONGI</dd><dt>雇用形態と給与</dt><dd>正社員　月給00万円〜<br>アルバイト　時給0,000円〜</dd><dt>業務内容</dt><dd>業務の内容が入ります。60字程度です。</dd><dt>勤務地</dt><dd>各店舗の所在地が入ります。</dd><dt>勤務時間、休日</dt><dd>勤務時間と休日が入ります。</dd><dt>待遇、福利厚生</dt><dd>待遇と福利厚生が入ります。</dd><dt>応募資格</dt><dd>応募の資格が入ります。</dd><dt>選考の流れ</dt><dd>応募、面接、内定の流れが入ります。</dd></dl><a class="btn" href="wireframe-entry.html">調理スタッフに応募する</a></div><div class="job"><h3 class="h3">サービススタッフ</h3><dl class="job-row mt24"><dt>募集店舗</dt><dd>X AZABUJUBAN、Cenador ROPPONGI</dd><dt>雇用形態と給与</dt><dd>正社員　月給00万円〜<br>アルバイト　時給0,000円〜</dd><dt>業務内容</dt><dd>業務の内容が入ります。60字程度です。</dd><dt>勤務地</dt><dd>各店舗の所在地が入ります。</dd><dt>勤務時間、休日</dt><dd>勤務時間と休日が入ります。</dd><dt>待遇、福利厚生</dt><dd>待遇と福利厚生が入ります。</dd><dt>応募資格</dt><dd>応募の資格が入ります。</dd><dt>選考の流れ</dt><dd>応募、面接、内定の流れが入ります。</dd></dl><a class="btn" href="wireframe-entry.html">サービススタッフに応募する</a></div></div>
     <p class="note">職種は、調理系とサービス系の2区分です。職種ごとに、同じ項目を並べます。雇用形態ごとに、給与を記載します。募集は常時掲載です。</p>
