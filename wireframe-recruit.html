@@ -154,6 +154,17 @@ details.acc .in{padding:0 0 24px}
 .c .sec{padding-block:80px}
 .c .sec-t{padding-top:0}
 .c-head{padding:80px 40px 32px;max-width:1200px;margin:0 auto}
+.ed{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:240px 240px 340px;gap:8px}
+.ed>*,.c-menu-ph>*{min-width:0}
+.ed .ph,.c-menu-ph .ph{width:100%;height:100%;aspect-ratio:auto}
+.ed-a{grid-column:1/9;grid-row:1/3}
+.ed-b{grid-column:9/13;grid-row:1}
+.ed-c{grid-column:9/13;grid-row:2}
+.ed-d{grid-column:1/6;grid-row:3}
+.ed-e{grid-column:6/13;grid-row:3}
+.c-menu-ph{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:300px 300px;gap:4px}
+.cmp-a{grid-column:1;grid-row:1/3}
+.cmp-d{grid-column:2/4}
 .mosaic{display:grid;grid-template-columns:7fr 5fr;gap:4px}
 .mosaic.rev{grid-template-columns:5fr 7fr}
 .m-b{display:grid;grid-template-rows:1fr 1fr;gap:4px}
@@ -258,6 +269,14 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   .c .sec{padding-block:64px}
   .c .sec-t{padding-top:0}
   .c-head{padding:64px 20px 24px}
+  .ed{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:4px}
+  .c-menu-ph{grid-template-rows:none}
+  .ed .ph,.c-menu-ph .ph{height:auto;aspect-ratio:var(--r,16/9)}
+  .ed-a,.ed-e{grid-column:1/3;grid-row:auto}
+  .ed-b,.ed-c,.ed-d{grid-column:auto;grid-row:auto}
+  .ed-d{grid-column:1/3}
+  .c-menu-ph{grid-template-columns:1fr 1fr}
+  .cmp-a,.cmp-d{grid-column:1/3;grid-row:auto}
   .mosaic,.mosaic.rev{grid-template-columns:1fr}
   .m-b{grid-template-rows:none}
   .m-b .dish,.m-b .ph{height:auto}
