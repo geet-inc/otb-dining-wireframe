@@ -173,6 +173,8 @@ details.acc .in{padding:0 0 24px}
 .dish-n{position:absolute;left:20px;bottom:14px;font-size:14px;font-weight:500}
 .stack4>*+*{margin-top:4px}
 .c-menu{display:grid;grid-template-columns:1fr 1fr;gap:64px 80px}
+.dot li{padding-left:1em;text-indent:-1em}
+.dot li::before{content:"・"}
 .m-row{display:flex;justify-content:space-between;gap:24px;padding:7px 0}
 .m-row small{display:block;font-size:12px;color:var(--text-sub)}
 .m-row span:last-child{white-space:nowrap}
@@ -304,7 +306,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 </style>
 </head>
 <body class="c has-bar">
-<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">元麻布</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
 <main>
   <div class="hero">
     <div class="ph fill" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：代表的な料理を、大胆に寄って</span></div>
@@ -312,9 +314,8 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   </div>
 
   <div class="c-head c-intro">
-    <p class="c-copy">コピーが、ここに入ります。</p>
-    <p class="mt16">店舗の短い説明が、ここに入ります。40字程度です。</p>
-    <p class="note">見出しは20字程度、本文は40字程度です。店舗の説明は、ここだけにします。</p>
+    <p class="c-copy">わがままな大人を虜にするごちそう。</p>
+    <p class="mt16">ジャンルを超えた多彩な一皿を、自由なアラカルトでワインとともに。</p>
   </div>
 
   <section id="menu" class="sec">
@@ -323,21 +324,35 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
       <div class="x-menu mt40">
         <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div></div>
         <div>
-          <div class="course"><h3 class="h3">代表的な料理</h3><div class="mt16"><div class="m-row"><span>ラザニア</span><span>0,000円</span></div><div class="m-row"><span>ナポリタン</span><span>0,000円</span></div><div class="m-row"><span>ハンバーグ</span><span>0,000円</span></div><div class="m-row"><span>料理名が入ります</span><span>0,000円</span></div></div></div>
-          <div class="course"><h3 class="h3">コース</h3><div class="mt16"><div class="m-row"><span>コース名が入ります<small>内容の説明は、40字程度です。</small></span><span>0,000円</span></div><div class="m-row"><span>コース名が入ります<small>内容の説明は、40字程度です。</small></span><span>0,000円</span></div></div></div>
+          <div class="course">
+            <h3 class="h3">MENU SELECTION</h3>
+            <div class="mt16"><div class="m-row"><span>馬肉のスパイシータルタル</span><span>¥2,420</span></div><div class="m-row"><span>田舎風パテ</span><span>¥1,980</span></div><div class="m-row"><span>蟹クリームコロッケ（2個）</span><span>¥1,980</span></div><div class="m-row"><span>自家製ミートソースの手打ちラザーニャ または サフランドリア</span><span>¥2,860</span></div><div class="m-row"><span>ペンネグラタン（海老 または チキン）</span><span>¥2,760</span></div><div class="m-row"><span>フォアグラハンバーグ　トリュフソース</span><span>¥3,850</span></div><div class="m-row"><span>バスクチーズケーキ</span><span>¥990</span></div></div>
+            <ul class="small sub mt16">
+              <li>※価格はすべて税込です。</li>
+              <li>※お一人様につき1,650円のチャージ料を頂戴いたします（パン・ミネラルウォーターを含む）。</li>
+            </ul>
+          </div>
+          <div class="course">
+            <h3 class="h3">COURSE</h3>
+            <div class="course-h mt16"><p class="h3">シェフおまかせコース　全7品</p><span>¥12,100（税込）</span></div>
+            <ul class="dot mt8"><li>前菜3品</li><li>温菜</li><li>魚介料理</li><li>肉料理</li><li>パティシエ特製デザート</li></ul>
+            <ul class="small sub mt16">
+              <li>※コース価格にはチャージ料金が含まれます。</li>
+              <li>※仕入れ状況や季節により、内容が変更となる場合がございます。</li>
+            </ul>
+          </div>
           <div class="course">
             <p>お料理の詳細は、食べログでご覧いただけます。</p>
             <a class="more mt8" href="#">食べログでメニューを見る<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
           <div class="course">
-            <div class="course-h"><h3 class="h3">ドリンク</h3></div>
-            <p class="mt8">ワイン、カクテルなどを、ご用意しています。</p>
+            <div class="course-h"><h3 class="h3">DRINK</h3></div>
+            <p class="mt8">豊富なボトルワインに加え、ソムリエが料理との相性を考えて厳選したグラスワインを、常時8種類以上ご用意しております。</p>
             <a class="more mt8" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>ドリンクメニューを見る</a>
           </div>
           <ul class="small sub mt40">
-            <li>表示価格は、税込です。</li>
-            <li>季節や仕入れにより、メニューの内容が変わる場合がございます。</li>
-            <li>アレルギーや食事制限は、ご予約時にご相談ください。</li>
+            <li>※表示価格はすべて税込です。</li>
+            <li>※メニューは一例です。仕入れ状況等により内容が変更となる場合がございます。</li>
           </ul>
           <p class="note">代表的な料理とコースだけを載せ、詳細は食べログへ案内します。ドリンクは、PDFで掲載します。</p>
         </div>
@@ -359,19 +374,20 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div class="c-txt">
           <p class="small sub">シェフ</p>
           <p class="h3">坂本 昌彦</p>
-          <p class="mt16">ジャンルの枠を越え、ただひたすら情熱的に「美味しい」を追求。フランス南部や、スペインのカタルーニャ、バスクで経験を積み、帰国後は都内のビストロやワインバーで多彩な料理に携わる。</p>
+          <p class="small sub mt8">Masahiko Sakamoto</p>
+          <p class="mt16">南仏やスペインで多様な食文化に触れた後、都内のワインバーやビストロでシェフとして経験を積む。フレンチの確かな技術をベースに、ジャンルにとらわれない自由な発想で、親しみやすい料理とワインを愉しむスタイルを提案する。</p>
         </div>
       </div>
-      <p class="note">シェフの写真は、1枚です。プロフィールは、ご支給の文章から仮で抜粋しています。本文は、100字程度です。</p>
+      <p class="note">シェフの写真は、1枚です。</p>
     </div>
   </section>
 
   <section id="features" class="sec sec-t">
-    <div class="c-head" style="padding-top:0"><h2 class="h2">FEATURES（仮）</h2></div>
+    <div class="c-head" style="padding-top:0"><h2 class="h2">FEATURES</h2></div>
     <div class="c-three">
-      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の様子（厨房・手元）</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
-      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：ワイン</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
-      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：パティシエの手元（デザート）</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：調理の様子（厨房・手元）</span></div><div class="t"><p class="h3 mt24">食欲をそそる、大人のごちそう</p><p class="mt8">バターの香り、とろけるチーズ、溢れる肉汁。食欲を刺激する魅惑のごちそうを、好きなものを好きなだけ。心ゆくまでお愉しみください。</p></div></div>
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：ワイン</span></div><div class="t"><p class="h3 mt24">ソムリエ厳選の多彩なワイン</p><p class="mt8">料理との相性を考えて選び抜いたワインの数々。豊富なグラスワインから気軽に愉しめるボトルまで、お好みに合わせたペアリングもご提案します。</p></div></div>
+      <div><div class="ph " style="--r:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：パティシエの手元（デザート）</span></div><div class="t"><p class="h3 mt24">パティシエこだわりのデザート</p><p class="mt8">老舗パティスリーや星付きレストランで経験を積んだ専任のパティシエが、繊細な技術と豊かな感性を生かして仕上げる、本格的なデザート。</p></div></div>
     </div>
     <div class="wrap"><p class="note">お店の特徴を、3つ紹介します。パティシエがいることは、ここで伝えます。名前は出しません。</p></div>
   </section>
@@ -383,13 +399,13 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div>
           <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンター・フロア</span></div>
           <p class="h3 mt24">カウンター・フロア</p>
-          <p class="mt16">カウンターとフロアの紹介が、ここに入ります。雰囲気、過ごし方などを、100字程度で書きます。</p>
+          <p class="mt16">豊かなグリーンを配した店内。白地にブルーのタイルが印象的なカウンター席では、料理が仕上がる臨場感をお愉しみいただけます。ゆったりとくつろげるテーブル席もご用意し、大人数でのお集まりや貸切にも対応いたします。</p>
         </div>
         <div>
           <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div>
           <p class="h3 mt24">個室</p>
-          <p class="mt16">個室の紹介が、ここに入ります。人数、使い方、雰囲気などを、100字程度で書きます。</p>
-          <p class="small sub mt16">最大8名　＊料金やご利用の条件が入ります。</p>
+          <p class="mt16">清潔感のある白壁が印象的な個室には、季節ごとに入れ替わる現代日本画を展示。壁には天然素材を生かしたラドン漆喰を施し、落ち着いたプライベート空間で、お食事とワインをゆったりとお愉しみいただけます。</p>
+          <p class="small sub mt16">※最大8名様<br>※個室料　5,500円／室</p>
         </div>
       </div>
       <p class="note">カウンター・フロアと個室を、同じ大きさで並べて紹介します。席数は、配置で変わるため書きません。</p>
@@ -426,7 +442,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
           <dt>営業時間</dt><dd>18:00〜23:00（L.O. 22:00）</dd>
           <dt>定休日</dt><dd>日曜日、ほか不定休</dd>
         </dl>
-        <div class="mt40"><details class="acc"><summary>キャンセルについて</summary><div class="in sub">キャンセルの規定が入ります。100字程度です。</div></details><details class="acc"><summary>お子さま、ペットのご同伴について</summary><div class="in sub">ご利用の条件が入ります。100字程度です。</div></details></div>
+        <div class="mt40"><details class="acc"><summary>キャンセルポリシー</summary><div class="in sub"><p>ご予約のキャンセルおよびご予約人数の減少につきましては、以下のとおりキャンセル料を申し受けます。</p><p class="mt16">コースをご予約の場合</p><ul class="dot mt8"><li>ご予約日の前日：コース料金の50％</li><li>ご予約日の当日：コース料金の80％</li><li>無断キャンセル：コース料金の100％</li></ul><p class="mt16">お席のみをご予約の場合</p><ul class="dot mt8"><li>ご予約日の当日：お一人様5,000円</li><li>無断キャンセル：お一人様10,000円</li></ul><p class="mt16">※人数減少の場合は、減少した人数分に対してキャンセル料を申し受けます。</p></div></details><details class="acc"><summary>お子様・ペットのご利用</summary><div class="in sub"><p>Cenador ROPPONGIの個室では、お子様やペットとご一緒にお食事をお楽しみいただくことが可能です。ペットをご同伴の場合はご予約時に必ず犬種と匹数をお知らせください。ペットカートまたはキャリーバックをご持参ください。ペット用のお食事のご用意はできかねます。</p></div></details></div>
         </div>
         <div>
           <div class="ph " style="--r:16/9;--rs:4/3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>地図</span></div>
@@ -451,7 +467,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   </section>
 </main>
 <a class="bar" href="#reservation">RESERVATION</a>
-<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>東京都港区元麻布3-12-4 SP元麻布101<br>TEL 03-6459-2888<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>東京都港区六本木7-18-15 六本木718 3F<br>TEL 03-6812-9410<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});

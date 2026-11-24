@@ -173,6 +173,8 @@ details.acc .in{padding:0 0 24px}
 .dish-n{position:absolute;left:20px;bottom:14px;font-size:14px;font-weight:500}
 .stack4>*+*{margin-top:4px}
 .c-menu{display:grid;grid-template-columns:1fr 1fr;gap:64px 80px}
+.dot li{padding-left:1em;text-indent:-1em}
+.dot li::before{content:"・"}
 .m-row{display:flex;justify-content:space-between;gap:24px;padding:7px 0}
 .m-row small{display:block;font-size:12px;color:var(--text-sub)}
 .m-row span:last-child{white-space:nowrap}
@@ -304,7 +306,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 </style>
 </head>
 <body class="x has-bar">
-<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">麻布十番</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
+<header class="hd"><a class="logo" href="index.html">OTB DINING</a><nav class="gnav" aria-label="メインメニュー"><div class="dd"><a href="index.html#restaurants">RESTAURANTS<i class="fa-solid fa-angle-down" aria-hidden="true"></i></a><div class="dd-p"><a href="wireframe-x-azabujuban.html">X AZABUJUBAN<span class="small">元麻布</span></a><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI<span class="small">六本木</span></a></div></div><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav><details class="spnav"><summary aria-label="メニューを開く"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary><nav aria-label="メニュー"><span class="sp-h">RESTAURANTS</span><a class="sp-s" href="wireframe-x-azabujuban.html">X AZABUJUBAN</a><a class="sp-s" href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a></nav></details></header>
 <main>
   <div class="hero">
     <div class="ph fill" style="--r:16/9"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：空間と現代日本画</span></div>
@@ -312,8 +314,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   </div>
   <div class="wrap slim statement">
     <p class="h3">日常の味を愉しむ、非日常の空間。</p>
-    <p class="mt24 sub">ジャンルを超えて進化を続ける料理と、希少性の高い銘酒を、現代日本画とともに。</p>
-    <p class="note">現行サイトの言葉を、仮で入れています。見出しは20字程度、本文は40字程度です。店舗の説明は、ここだけにします。</p>
+    <p class="mt24 sub">日本の美意識を散りばめた特等席で味わう、旬の一皿と現代日本画。</p>
   </div>
 
   <section id="gallery" class="sec sec-t">
@@ -337,16 +338,16 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div class="x-sticky"><div class="ph " style="--r:4/5;--rs:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理</span></div></div>
         <div>
           <div class="course">
-            <div class="course-h"><h3 class="h3">季節のおまかせコース</h3><span>13,200円／人</span></div>
-            <p class="mt8">コースの説明が、ここに入ります。40字程度です。</p>
+            <div class="course-h"><h3 class="h3">料理長特別コース</h3><span>22,000円／人</span></div>
+            <p class="mt8">料理長自ら厳選した旬の食材を贅沢に使用し、技と感性を尽くした特別なコース。</p>
           </div>
           <div class="course">
-            <div class="course-h"><h3 class="h3">料理人おまかせコース（仮称）</h3><span>00,000円／人</span></div>
-            <p class="mt8">コースの説明が、ここに入ります。40字程度です。</p>
+            <div class="course-h"><h3 class="h3">季節の定番コース</h3><span>13,200円／人</span></div>
+            <p class="mt8">おばんざいや鮨、蕎麦など、馴染みのある料理で四季の味覚を楽しむ定番コース。</p>
           </div>
           <div class="course">
             <div class="course-h"><h3 class="h3">晩酌セット</h3><span>6,600円／人</span></div>
-            <p class="mt8">セットの説明が、ここに入ります。40字程度です。</p>
+            <p class="mt8">おばんざいと一品料理の基本セットに、お好みの料理をアラカルトから追加いただけます。</p>
           </div>
           <div class="course">
             <p>お料理の詳細は、食べログでご覧いただけます。</p>
@@ -354,16 +355,17 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
           </div>
           <div class="course">
             <div class="course-h"><h3 class="h3">ドリンク</h3></div>
-            <p class="mt8">日本酒、ワイン、シャンパーニュなどを、ご用意しています。</p>
+            <p class="mt8">全国各地から厳選した希少な日本酒を中心に、ビール、ワイン、焼酎など幅広く取り揃えております。</p>
             <a class="more mt8" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>ドリンクメニューを見る</a>
           </div>
           <ul class="small sub mt40">
-            <li>表示価格は、税込です。別途、サービス料10％を頂戴いたします。</li>
-            <li>完全予約制です。</li>
-            <li>季節や仕入れにより、お料理の内容が変わる場合がございます。</li>
-            <li>アレルギーや食事制限は、ご予約時にご相談ください。</li>
+            <li>※当店は完全予約制です。</li>
+            <li>※表示価格は税込です。別途、ご飲食代金（税抜）の10％をサービス料として頂戴いたします。</li>
+            <li>※ミネラルウォーターは無料でご提供しておりますが、ドリンクメニューよりお一人様につき1杯以上のご注文をお願いいたします。</li>
+            <li>※お苦手な食材やアレルギーがございましたら、ご予約時にお申し付けください。ヴィーガンやハラルなどの食事制限についてもご相談を承ります。</li>
+            <li>※晩酌セットは3名様までのご利用とさせていただきます。4名様以上の場合は、コース料理をご予約ください。</li>
           </ul>
-          <p class="note">コースは、料金と短い説明だけを載せ、詳細は食べログへ案内します。上位コースは年明けに追加の予定で、内容は実装時に差し替えます。ドリンクは、PDFで掲載します。</p>
+          <p class="note">コースは、料金と短い説明だけを載せ、詳細は食べログへ案内します。ドリンクは、PDFで掲載します。</p>
         </div>
       </div>
     </div>
@@ -376,9 +378,9 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
         <div class="ph " style="--r:3/4;--rs:4/5"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：料理長のポートレート</span></div>
         <div>
           <p class="small sub">料理長</p>
-          <p class="h3">日高 慎伸</p>
-          <p class="mt16">都内屈指の老舗料亭にて約10年間の研鑽を積んだ後、麻布の鮨店で大将を務める。会席や鮨のみならず、鰻、天麩羅、すき焼き、鉄板焼き、蕎麦など、幅広い分野で経験を重ね、技術を磨き上げてきた。</p>
-          <p class="note">ご支給のプロフィールから、仮で抜粋しています。本文は100字程度です。お名前の漢字（高と髙）を、ご確認ください。</p>
+          <p class="h3">日髙 慎伸</p>
+          <p class="small sub mt8">MASANOBU HIDAKA</p>
+          <p class="mt16">都内屈指の老舗料亭にて約10年間の研鑽を積み、鮨や鉄板焼きをはじめ、幅広い分野で経験を重ねる。持ち前の探究心で技術を磨き、国内外のVIPをもてなしてきた経験を生かし、多様な食文化や食習慣にも柔軟に対応する。</p>
         </div>
       </div>
     </div>
@@ -386,11 +388,11 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
 
   <section id="features" class="sec sec-t">
     <div class="wrap narrow">
-      <h2 class="h2">FEATURES（仮）</h2>
+      <h2 class="h2">FEATURES</h2>
       <div class="x-three mt64">
-        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：蕎麦を打つ手元</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
-        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：鮨を握る手元</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
-        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：日本酒を注ぐ接客</span></div><div class="t"><p class="h3 mt24">タイトルが入ります</p><p class="mt8">特徴の紹介が、ここに入ります。60字程度にとどめ、写真で伝えます。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：蕎麦を打つ手元</span></div><div class="t"><p class="h3 mt24">一日一日、丁寧に打つ蕎麦</p><p class="mt8">職人が毎日、丹精を込めて店内で手打ちする十割蕎麦。コースの締めには、旬の食材を取り入れ、季節ごとに趣向を凝らした蕎麦をご用意いたします。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：鮨を握る手元</span></div><div class="t"><p class="h3 mt24">確かな技が光る、握り鮨</p><p class="mt8">鮨店で大将を務めた料理長が、目の前のカウンターで握る鮨。一般的な会席料理とは一線を画す、X麻布十番ならではの一品です。</p></div></div>
+        <div><div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：日本酒を注ぐ接客</span></div><div class="t"><p class="h3 mt24">厳選された希少な銘酒</p><p class="mt8">蔵元との特別な繋がりを通じて仕入れる日本酒。SAKE DIPLOMAの資格を持つスタッフが、お客様のお好みやお料理に合わせてご提案いたします。</p></div></div>
       </div>
       <p class="note">お店の特徴を、3つ紹介します。名前や顔は出さず、お店の風景として見せます。</p>
     </div>
@@ -402,15 +404,15 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
       <div class="two mt64">
         <div>
           <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：個室</span></div>
-          <p class="h3 mt24">個室</p>
-          <p class="mt16">個室の紹介が、ここに入ります。人数、使い方、雰囲気などを、100字程度で書きます。</p>
-          <p class="small sub mt16">最大6名　＊料金やご利用の条件が入ります。</p>
+          <p class="h3 mt24">完全個室</p>
+          <p class="mt16">店内の奥には完全個室をご用意。周囲を気にせず、心ゆくまでお寛ぎいただける落ち着いた空間です。大切なご接待やご会食はもちろん、プライベートなひとときにも。特別な時間を、ごゆっくりお楽しみください。</p>
+          <p class="small sub mt16">最大6名様<br>個室料　5,500円／室</p>
         </div>
         <div>
           <div class="ph " style="--r:4/3"><i class="fa-regular fa-image" aria-hidden="true"></i><span>写真：カウンター</span></div>
-          <p class="h3 mt24">カウンター</p>
-          <p class="mt16">カウンターの紹介が、ここに入ります。席のゆとり、目の前の作品などを、100字程度で書きます。</p>
-          <p class="small sub mt16">8席</p>
+          <p class="h3 mt24">カウンター席</p>
+          <p class="mt16">現代日本画の名画を間近に望む、臨場感あふれるカウンター席。ゆったりとした席幅を設け、大切なご会食から気軽な一杯まで、幅広いシーンに対応。心地よい会話を愉しみながら、思い思いのひとときをお過ごしいただけます。</p>
+          <p class="small sub mt16">全8席</p>
         </div>
       </div>
       <p class="note">個室とカウンターを、同じ大きさで並べて紹介します。</p>
@@ -448,7 +450,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
             <dt>定休日</dt><dd>土曜日、日曜日、祝日</dd>
             <dt>席数</dt><dd>カウンター8席、個室1室（最大6名）</dd>
           </dl>
-          <div class="mt40"><details class="acc"><summary>キャンセルについて</summary><div class="in sub">キャンセルの規定が入ります。100字程度です。</div></details><details class="acc"><summary>お子さま、ペットのご同伴について</summary><div class="in sub">ご利用の条件が入ります。100字程度です。</div></details></div>
+          <div class="mt40"><details class="acc"><summary>キャンセルポリシー</summary><div class="in sub"><p>ご予約のキャンセルおよび人数変更につきましては、以下のキャンセル料を申し受けます。</p><ul class="dot mt8"><li>ご予約日前日：ご予約料金の50％</li><li>ご予約日当日：ご予約料金の80％</li><li>無断キャンセル：ご予約料金の100％</li></ul></div></details><details class="acc"><summary>お子様・ペットのご利用</summary><div class="in sub"><p>X麻布十番の個室では、お子様やペットとご一緒にお食事をお楽しみいただくことが可能です。ペットをご同伴の場合はご予約時に必ず犬種と匹数をお知らせください。ペットカートまたはキャリーバックをご持参ください。ペット用のお食事のご用意はできかねます。</p></div></details></div>
           <p class="note">テイクアウトやケータリングなど、よくあるご質問があれば、ここに追加します。</p>
         </div>
         <div>
@@ -473,7 +475,7 @@ input[type=file]{width:100%;min-height:48px;padding:10px 12px;border:1px dashed 
   </section>
 </main>
 <a class="bar" href="#reservation">RESERVATION</a>
-<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>住所が入ります<br>TEL 00-0000-0000<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
+<footer class="ft"><dl class="ft-stores mt40"><div><dt><a href="wireframe-x-azabujuban.html">X AZABUJUBAN</a></dt><dd>東京都港区元麻布3-12-4 SP元麻布101<br>TEL 03-6459-2888<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div><div><dt><a href="wireframe-cenador-roppongi.html">Cenador ROPPONGI</a></dt><dd>東京都港区六本木7-18-15 六本木718 3F<br>TEL 03-6812-9410<br><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</a></dd></div></dl><div class="ft-in mt40"><a class="logo" href="index.html">OTB DINING</a><nav class="ft-links" aria-label="フッターメニュー"><a href="wireframe-news.html">NEWS</a><a href="wireframe-recruit.html">RECRUIT</a><a href="wireframe-contact.html">CONTACT</a><a href="wireframe-privacy.html">PRIVACY POLICY</a></nav></div><a class="ft-museum" href="#" aria-label="美術館のサイトへ"><div class="ph " style="--r:4/1"><i class="" aria-hidden="true"></i><span>美術館ロゴ</span></div></a><p class="ft-bottom">© OTB DINING. All Rights Reserved.</p></footer>
 <script>
 document.querySelectorAll('.spnav nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var d=document.querySelector('.spnav[open]');if(d){d.open=false;}}});
